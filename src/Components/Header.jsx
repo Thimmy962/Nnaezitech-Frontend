@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { CiMail } from 'react-icons/ci';
 import { FaPhone } from 'react-icons/fa6';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 import {BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin} from 'react-icons/bi'
 import {AiOutlineTwitter} from 'react-icons/ai'
 import { Link } from 'react-router-dom';
@@ -43,57 +41,18 @@ const Header = () => {
             </div>
       </div>
 
-      <div id='header' className='fixed'>
-        <div id='logo'>
-          <h3>Nnaezitech</h3>
-        </div>
-
-        <div id="wide-screen">
-            <ul>
-                <li className='header-list'><Link to={"/"}>Home</Link></li>
-                <li className='header-list'><Link to={"listing"}>Listing</Link></li>
-                <li>
-                    <div className="dropdown">
-                        <div className="dropdown-header dropdown-list">
-                            Services
-                        </div>
-
-                        <ul className='dropdown-content'>
-                            <li className='dropdown-header-list'><Link to={""}>Painting</Link></li>
-                            <li className='dropdown-header-list'><Link to={""}>Repair</Link></li>
-                            <li className='dropdown-header-list'><Link to={""}>Body Work</Link></li>
-                            <li className='dropdown-header-list'><Link to={""}>Servicing</Link></li>
-                        </ul>
-                    </div>
-                </li>
-                <li className='header-list'><Link to={"about"}>About</Link></li>
-                <li className='header-list'><Link to={"contact"}>Contact</Link></li>
-            </ul>
-        </div>
-
-        <div className="phone">
-            {['Menu'].map(
-            (variant) => (
-                <DropdownButton
-                    as={ButtonGroup}
-                    key={variant}
-                    id={`dropdown-variants-${variant}`}
-                    variant={variant.toLowerCase()}
-                    title={variant}
-                >
-                    <Dropdown.Item  href='#header'>Home</Dropdown.Item>
-                    <Dropdown.Item>Listing</Dropdown.Item>
-                    <Dropdown.Item>Painting</Dropdown.Item>
-                    <Dropdown.Item>Repairs</Dropdown.Item>
-                    <Dropdown.Item>Body Work</Dropdown.Item>
-                    <Dropdown.Item>Servicing</Dropdown.Item>
-                    <Dropdown.Item>About</Dropdown.Item>
-                    <Dropdown.Item>Contact</Dropdown.Item>
-                </DropdownButton>
-            ),
-      )}
-        </div>
-      </div>
+        <Navbar bg='light' expand="lg"className='navbar'>
+              <Navbar.Brand href="/" className="mr-5">Nnaezitech</Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav className="mr-auto ">
+                  <Nav.Link href='/'>Home</Nav.Link>
+                  <Nav.Link href="/listing">Listing</Nav.Link>
+                  <Nav.Link href="/about">About</Nav.Link>
+                  <Nav.Link href="/contact">Contact</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+          </Navbar>
     </>
   );
 };

@@ -38,13 +38,6 @@ const About = () => {
             </div>
 
         </div>
-
-        <div id="visit-us">
-            <div className="visit-us">
-                Visit Us
-            </div>
-        </div>
-
         <div className='about-div-3'>
                 <div className="our-team">
                     Our Team
