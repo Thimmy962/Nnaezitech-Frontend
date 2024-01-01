@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import { API_BASE_URL } from '../Components/config'
 import ImageSlider from '../Components/Carousel'
-import '../css/detail.css'
+
 
 const Detail = () => {
     const param = useParams()
