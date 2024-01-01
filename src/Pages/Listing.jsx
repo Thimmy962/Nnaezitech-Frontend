@@ -5,6 +5,7 @@ import Sidebar from '../Components/Sidebar';
 import MultipleCards from '../Components/MultipleCards';
 import SearchForm from '../Components/SearchBar';
 import { Accordion } from 'react-bootstrap';
+import '../css/listing.css'
 
 
 

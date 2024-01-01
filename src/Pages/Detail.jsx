@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import { API_BASE_URL } from '../Components/config'
-import Carousel from '../Components/Carousel'
-
+import ImageSlider from '../Components/Carousel'
+import '../css/detail.css'
 
 const Detail = () => {
     const param = useParams()
@@ -41,19 +41,8 @@ const Detail = () => {
           <div>Loading</div>
         ) : car ? (
           <div className='content'>
-                <Carousel/>
-                {
-                  car.car_image ? car.car_image.map(image =>(
-                    <div style={{display: "flex", justifyContent: "center",
-                    }}>
-                      <img src={`${API_BASE_URL}/${image}`} style={{width: "500px", height: "250px"}}/>
-                    </div>
-                  ))
-                  :
-                  <div>
-                    No Image Available for this car
-                  </div>
-                }
+                {car.car_image && <ImageSlider images = {car.car_image}/>}
+                {/* <ImageSlider {...{images}} /> */}
                 {car &&
                   <div id='car_info'>
                         <div>

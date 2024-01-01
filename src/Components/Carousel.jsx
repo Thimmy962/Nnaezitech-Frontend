@@ -1,38 +1,86 @@
+// import React, { useState } from 'react'
+// import { API_BASE_URL } from './config'
+// import {FaArrowAltCircleRight, FaArrowAltCircleLeft} from 'react-icons/fa' 
+
+// const ImageSlider = ({images}) =>{
+
+//   const [current, setCurrent] = useState(0)
+//   const length = images.length
+
+//   const nextSlide = () =>{
+//     setCurrent(current === length - 1 ? 0 : current + 1)
+//     const div = document.querySelector('.slide')
+//     if(div.classList.contains('left')){
+//       div.classList.remove('left')
+//       div.classList.add('right')
+//       console.log(div.classList)
+
+//     }
+//     else if(!div.classList.contains('left')){
+//       div.classList.add('right')
+//       console.log(div.classList)
+
+//     }
+//   }
+
+//   const previousSlide = () => {
+//     setCurrent(current === 0 ? length - 1 : current - 1)
+//     const div = document.querySelector('.slide')
+//     if(div.classList.contains('right')){
+//       div.classList.remove('right')
+//       div.classList.add('left')
+//       console.log(div.classList)
+//     }
+//     else{
+//       div.classList.add('left')
+//             console.log(div.classList)
+
+//     }
+//   }
+
+//   return(
+//     <>
+//       <div className="carousel-slider">
+//         <FaArrowAltCircleLeft className='left-arrow arrows' onClick={previousSlide}/>
+//         <FaArrowAltCircleRight className='right-arrow arrows' onClick={nextSlide}/>
+//                 {images.map((image, index) =>
+//                     {                      
+//                        return (
+//                         <div className={index ===current ? 'slide active' : 'slide'} key={index}>
+//                           {index === current && <img src={`${image}`} className='carousel-image' /> }
+//                         </div>
+//                        )
+
+//                     } )
+//                   }
+//       </div>
+//     </>
+//   )
+// }
+
+// export default ImageSlider
+
 import React from 'react';
-import { useSpring, animated, interpolate } from 'react-spring';
-import { useDrag } from 'react-use-gesture';
+import Carousel from 'react-bootstrap/Carousel';
+import { API_BASE_URL } from './config';
+import { Link } from 'react-router-dom';
 
-const Carousel = ({ slides }) => {
-  const [index, setIndex] = React.useState(0);
-
-  const bind = useDrag(({ down, movement: [mx], direction: [xDir], distance, cancel }) => {
-    if (down && distance > window.innerWidth / 4) {
-      cancel();
-      setIndex((prev) => (xDir > 0 ? prev - 1 : prev + 1));
-    }
-  });
-
-  const props = useSpring({
-    marginLeft: `-${index * 100}%`,
-  });
-
+const ImageSlider = ({images}) => {
   return (
-    <div style={{ overflow: 'hidden', position: 'relative', width: '100%', height: '100%' }} {...bind()}>
-      <animated.div
-        style={{
-          display: 'flex',
-          width: `${slides.length * 100}%`,
-          ...props,
-        }}
-      >
-        {slides.map((slide, i) => (
-          <div key={i} style={{ width: '100%', flexShrink: 0 }}>
-            {slide}
-          </div>
-        ))}
-      </animated.div>
-    </div>
+    <Carousel>
+      {
+        images.map((image, index) =>(
+          <Carousel.Item key={index}>
+              <div className="d-flex justify-content-center align-items-center" >
+              <Link to={`${API_BASE_URL}/${image}`}>
+                  <img src={`${API_BASE_URL}/${image}`} className='carousel-img'/>
+              </Link>
+              </div>
+      </Carousel.Item>
+        ))
+      }
+    </Carousel>
   );
-};
+}
 
-export default Carousel;
+export default ImageSlider;

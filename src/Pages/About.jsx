@@ -1,5 +1,6 @@
 import React from 'react'
 import GetInTouch from '../Components/GetInTouch'
+import '../css/about.css'
 
 const About = () => {
   return (
