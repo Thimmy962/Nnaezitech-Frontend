@@ -231,7 +231,7 @@ div.accordion h2 > .accordion-button{
     width: 100%;
     min-height: 600px;
     padding-bottom: 50px;
-    background-image: url("src/assets/Mercedes-Benz-Free-PNG-Image.png");
+    background-image: url("./assets/Mercedes-Benz-Free-PNG-Image.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;

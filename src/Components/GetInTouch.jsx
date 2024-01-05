@@ -60,6 +60,12 @@ const GetInTouch = () => {
             <div className="img-div">
                 <img src="src/assets/Mercedes-Benz-Free-PNG-Image.png" alt="" className='in-touch-img'/>
             </div>
+          <div className="text-center">
+              <div className='btn btn-outline-secondary btn-lg'>
+                  Contact Us
+              </div>
+          </div>
+
         </div>
   </div>
   )
