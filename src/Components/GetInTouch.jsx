@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import {API_BASE_URL} from './config'
+import { Link } from 'react-router-dom'
 
 const GetInTouch = () => {
   const [name, setName] = useState('')
@@ -59,26 +60,6 @@ const GetInTouch = () => {
             <div className="img-div">
                 <img src="src/assets/Mercedes-Benz-Free-PNG-Image.png" alt="" className='in-touch-img'/>
             </div>
-        </div>
-
-        <div id="message">
-            <div id="message-header">
-                Send A Message
-            </div>
-
-            <form action="" onSubmit={submit}>
-                <input type="text" placeholder='Name' className='input' value={name}
-                required onChange={(e)=>setName(e.target.value)}/>
-
-                <input type="text" name="" id="" placeholder='Phone' className='input' value={phone} minLength={10} maxLength={15}
-                    required onChange={(e)=>setPhone(e.target.value)} />
-
-                <input type="email" placeholder='Email' className='input' value={mail} required
-                    onChange={(e)=>setMail(e.target.value)} />
-                <textarea name="" id="" cols="30" rows="10" placeholder='Message' className='input' required
-                        value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-                <button type="submit" className='input'>Submit</button>
-            </form>
         </div>
   </div>
   )

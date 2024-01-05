@@ -1,3 +1,11 @@
+/* #root{
+    background-image: url('https://media.istockphoto.com/id/1493574434/photo/car-rushes-along-the-highway-at-sunset-low-angle-side-view.jpg?s=612x612&w=0&k=20&c=F8-3q5AGodfjocZ3xQ0vVvANAVIbsq2SHisbeMRE5eU=');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    object-fit: cover;
+} */
+
 /* Listing Page */
 .listing{
     padding-bottom: 20px;
@@ -417,6 +425,7 @@ div.accordion h2 > .accordion-button{
 .inventory-image{
     width: 350px;
     height: 250px;
+    object-fit: cover;
 }
 
 

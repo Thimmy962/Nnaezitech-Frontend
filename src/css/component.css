@@ -134,7 +134,7 @@ nav .nav-link {
 
 #hours-location {
     background: linear-gradient(rgba(0, 0, 0, .8), rgba(255, 68, 0, 0.6));
-    display: grid;
+    /* display: grid; */
     row-gap: 70px;
     padding-top: 100px;
     position: relative;
@@ -159,38 +159,23 @@ nav .nav-link {
     top: 0;
 }
 
-#message {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(rgba(255, 68, 0, 0.9), orangered);
-    padding: 50px 50px 20px;
+#get-in-touch-button{
+    margin: 20px 0;
+    background-color: rgba(0, 0, 0, .8);
+    color: red;
+    border: 1px solid rgba(0, 0, 0, .8);
 }
 
+#get-in-touch-button:hover{
+    cursor: crosshair;
+}
 
 @media (width >=950px) {
-    #get-in-touch {
-        display: grid;
-        justify-content: center;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
     #hours-location {
         height: auto;
         margin-top: 100px;
         flex: 1;
     }
-
-    #message {
-        padding-top: 120px;
-        background-color: orangered;
-    }
-}
-
-form {
-    display: grid;
-    row-gap: 20px;
-    color: white;
-    border: 0;
 }
 
 .location-hour {
@@ -226,29 +211,6 @@ form {
     }
 }
 
-#message .input {
-    padding: 5px 20px;
-    background: rgba(255, 68, 0, .1);
-    color: white;
-    border: .5px solid;
-}
-
-#message .input::placeholder {
-    color: white;
-}
-
-#message .input:not(textarea) {
-    height: 50px;
-}
-
-#message .input:focus {
-    outline: none;
-}
-
-#message button:hover {
-    color: orangered;
-    background-color: white;
-}
 
 /* Side Bar */
 #sidebar{

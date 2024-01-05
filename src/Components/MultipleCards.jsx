@@ -12,7 +12,7 @@ const MultipleCards = ({ cars }) => {
                         <div style={{height: '300px', width: '100%', overflow: 'hidden', 
                                 display: "flex", justifyContent: "center"}}>
                             {car.car_image && car.car_image.length ? (
-                                <Card.Img src={`${API_BASE_URL}/${car.car_image[0]}`} style={{ width: "100%", height: "100%" }} />
+                                <Card.Img src={`${API_BASE_URL}${car.car_image[0]}`} style={{ width: "100%", height: "100%", objectFit: "cover"}} />
 
                                 ) : (
                                 <Card.Img src='src/assets/download.jpeg' alt={`${car.name}`}  variant='top' style={{ width: "100%", height: "100%" }}/>

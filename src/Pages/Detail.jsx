@@ -23,15 +23,18 @@ const Detail = () => {
         if(res.status == 404){
           setError(true)
           setLoading(false)
+          console.log(await json(res))
           return
         }
         let data = await res.json()
         setLoading(false)
         
+        
         if (data.auxilliary == true) {
           setAuxilliary("Present");
         }
         setCar(data)
+        console.log(data)
       }
         getCar(id)
     }, [])
@@ -42,7 +45,6 @@ const Detail = () => {
         ) : car ? (
           <div className='content'>
                 {car.car_image && <ImageSlider images = {car.car_image}/>}
-                {/* <ImageSlider {...{images}} /> */}
                 {car &&
                   <div id='car_info'>
                         <div>

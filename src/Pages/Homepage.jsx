@@ -21,6 +21,7 @@ const Homepage = () => {
     });
     let data = await res.json();
     setNewInventory(data);
+    console.log(data)
   };
 
   const observeButtons = () => {
@@ -134,7 +135,7 @@ const Homepage = () => {
                   newInventory?.map(item => (
                     <div className="item" key={item.id}>
                       {item.car_image && item.car_image.length > 0 ? (
-                        <img src={`${API_BASE_URL}/${item.car_image[0]}`} alt={`${item.name}`} className='inventory-image' />
+                        <img src={`${API_BASE_URL}${item.car_image[0]}`} alt={`${item.name}`} className='inventory-image' loading="lazy"/>
                       ) : (
                         <img src='src/assets/download.jpeg' alt={`${item.name}`} className='inventory-image' />
                       )}
