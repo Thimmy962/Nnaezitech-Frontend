@@ -46,13 +46,13 @@ const GetInTouch = () => {
 
                     <div className="hour">
                     <h3 className='hour-header'>Hours</h3>
-                    <p>Mon:10am – 5pm</p>
-                    <p>Tue:10am – 5pm</p>
-                    <p>Wed:10am – 5pm</p>
+                    <p>Mon: 10am – 5pm</p>
+                    <p>Tue: 10am – 5pm</p>
+                    <p>Wed: 10am – 5pm</p>
                     <p>Thur:10am – 5pm</p>
-                    <p>Fri:10am – 3pm</p>
-                    <p>Sat:10am – 5pm</p>
-                    <p>Sun:Closed</p>
+                    <p>Fri: 10am – 3pm</p>
+                    <p>Sat: 10am – 5pm</p>
+                    <p>Sun: Closed</p>
                     </div>
                 </div>
             </div>
@@ -60,12 +60,6 @@ const GetInTouch = () => {
             <div className="img-div">
                 <img src="src/assets/Mercedes-Benz-Free-PNG-Image.png" alt="" className='in-touch-img'/>
             </div>
-          <div className="text-center">
-              <div className='btn btn-outline-secondary btn-lg'>
-                  Contact Us
-              </div>
-          </div>
-
         </div>
   </div>
   )

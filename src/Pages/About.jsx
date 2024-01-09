@@ -10,7 +10,7 @@ const About = () => {
                 <img src="src/assets/Mercedes-Benz-sedan-black.png" alt=""/>
             </div>
             <div className="about-top-inner-2">
-                <div>
+                <div className='text-center'>
                     <div>About US</div>
                     <div>Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh.
                         Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla quis lorem ut libero malesuada feugiat.
@@ -26,6 +26,7 @@ const About = () => {
             <div>
                 A Leading Car Dealer For Over 30 Years
             </div>
+            
             <div>
                 <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lobortis justo, ut iaculis nulla. Donec varius magna ut turpis luctus aliquet. Nulla mauris eros, molestie non commodo eget, molestie ut nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis porttitor augue nibh, ut molestie tortor interdum vel. 

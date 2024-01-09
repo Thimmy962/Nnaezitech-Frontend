@@ -1,11 +1,3 @@
-/* #root{
-    background-image: url('https://media.istockphoto.com/id/1493574434/photo/car-rushes-along-the-highway-at-sunset-low-angle-side-view.jpg?s=612x612&w=0&k=20&c=F8-3q5AGodfjocZ3xQ0vVvANAVIbsq2SHisbeMRE5eU=');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    object-fit: cover;
-} */
-
 /* Listing Page */
 .listing{
     padding-bottom: 20px;
@@ -61,7 +53,7 @@ div.accordion-item
 }
 
 div.accordion h2 > .accordion-button{
-    color: var(dark);
+    color: var(--dark);
     background-color: white;
 }
 
@@ -229,17 +221,17 @@ div.accordion h2 > .accordion-button{
 #underlay{
     z-index: -1;
     width: 100%;
-    min-height: 600px;
+    min-height: 557px;
     padding-bottom: 50px;
     background-image: url("./assets/Mercedes-Benz-Free-PNG-Image.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;
     opacity: 0;
-    transform: scale(.5);
     animation: showcar 2000ms forwards ease-out;
-
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 
 #beginning{
     padding: 0 0 50px 0;
@@ -260,7 +252,7 @@ div.accordion h2 > .accordion-button{
     color: #fff;
     width: 500px;
     opacity: 0;
-    /* padding-bottom: 50px; */
+    padding-bottom: 50px;
     animation: show-writing 1500ms ease-in forwards 1;
 }
 
@@ -274,7 +266,7 @@ div.accordion h2 > .accordion-button{
 #long{
     font-weight: 1000;
     padding-left: 90px;
-    font-size: 20px;
+    font-size: 18px !important;
     color: #e7e1e1;
 }
 
@@ -342,7 +334,7 @@ div.accordion h2 > .accordion-button{
 }
 
 #two-colors .content{
-    width: 70%;
+    width: 90%;
     margin: auto;
    padding: 0 40px;
    text-align: center;
@@ -518,12 +510,7 @@ div.accordion h2 > .accordion-button{
         padding: 0 10px;
     }
 
-    #two-colors{
-        width: 100%;
-        padding: 0;
-    }
-
-    #two-colors > div:nth-child(2), #two-colors > div:nth-child(1){
+    #two-colors > div{
         width: 100%;
     }
 
@@ -773,7 +760,7 @@ justify-content: center;
         width: 100%;
     }
 
-    .about-top-inner-2 > div > div:nth-child(1){
+    .about-top-inner-2 > div     > div:nth-child(1){
         font-size: 40px;
         display: flex;
         justify-content: center;

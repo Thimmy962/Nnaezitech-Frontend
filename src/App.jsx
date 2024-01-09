@@ -15,14 +15,14 @@ function App() {
     <> 
       <Header />
       <Routes>
-          <Route path="" element={<Homepage />} />
-          <Route path="about" element={<About />} />
+          <Route path="/" element={<Homepage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/listing" element={<Listing />} />
+          <Route path="/listing/:status" element={<Listing />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/detail/:id" element={<Detail />} />
+          <Route path="/listing/detail/:id" element={<Detail />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="listing" element={<Listing />} />
-          <Route path="listing/:status" element={<Listing />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="detail/:id" element={<Detail />} />
-          <Route path="listing/detail/:id" element={<Detail />} />
       </Routes>
     </>
   )
