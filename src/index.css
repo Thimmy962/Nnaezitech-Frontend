@@ -505,7 +505,7 @@ div.accordion h2 > .accordion-button{
     }
 }
 
-@media (width <= 400px){
+@media (width <= 450px){
     #beginning{
         padding: 0 10px;
     }
