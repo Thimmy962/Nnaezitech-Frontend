@@ -212,7 +212,7 @@ div.accordion h2 > .accordion-button{
 /* Homepage Component */
 .homepage{
     height: 80vh;
-    background-image: url('../assets/porsche.jpg');
+    background-image: url('../src/assets/porsche.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
