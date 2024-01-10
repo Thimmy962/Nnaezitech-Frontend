@@ -93,7 +93,7 @@ const Homepage = () => {
           </div>
 
           <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[2] = el)}>
-            <img src="../src/assets/transmission.svg" alt="" />
+            <img src="/src/assets/transmission.svg" alt="transmission" />
             <p>TRANSMISSION SERVICE</p>
             <p>A maintained transmission will extend your vehicle's life and save money.</p>
           </div>
