@@ -329,7 +329,7 @@ div.accordion h2 > .accordion-button{
     width: 100%;
     text-align: center;
     position: relative;
-    background-image: url('../assets/bmw-half.jpg');
+    background-image: url('../src/assets/bmw-half.jpg');
     background-position: center;
 }
 

@@ -93,7 +93,7 @@ const Homepage = () => {
           </div>
 
           <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[2] = el)}>
-            <img src="/src/assets/transmission.svg" alt="transmission" />
+            <img src="../src/assets/transmission.svg" alt="transmission" />
             <p>TRANSMISSION SERVICE</p>
             <p>A maintained transmission will extend your vehicle's life and save money.</p>
           </div>
@@ -109,7 +109,7 @@ const Homepage = () => {
                             <div key={index} className='inventory'>
                               {inventory.car_image ? <img src={`${API_BASE_URL}${inventory.car_image[0]}`} alt="" lazy = 'true'/>
                               :
-                                <img src='../assets/Mercedes-Benz-Free-PNG-Image.png' alt='No Image'/>
+                                <img src='../src/assets/download.jpeg' alt='No Image'/>
                               }
                               <p>{inventory.name}</p>
                             </div>
