@@ -212,7 +212,7 @@ div.accordion h2 > .accordion-button{
 /* Homepage Component */
 .homepage{
     height: 80vh;
-    background-image: url('../src/assets/porsche.jpg');
+    background-image: url('/porsche.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -314,7 +314,7 @@ div.accordion h2 > .accordion-button{
 }
 
 
-@media (width >= 450px) {
+@media (width >= 850px) {
     .services-body{
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
@@ -325,11 +325,12 @@ div.accordion h2 > .accordion-button{
     }
 }
 
+
 .our-products{
     width: 100%;
     text-align: center;
     position: relative;
-    background-image: url('../src/assets/bmw-half.jpg');
+    background-image: url('/bmw-half.jpg');
     background-position: center;
 }
 
@@ -352,55 +353,36 @@ div.accordion h2 > .accordion-button{
 
 
 .inventory{
-    height: 500px;
+    height: 650px;
     background-color: rgba(0, 0, 0, .5);
     padding-bottom: 20px;
+    max-width: 400px;
 }
 
 .inventory img{
-    width: 100%;
+    width: 98%;
     height: 60%;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 .inventory img:hover{
     transform: scale(1.05);
 }
 
-
-
-/* Detail Page */
-#detail{
-    padding-top: 20px;
-    background-color: #fff;
+.text-center .btn.btn-lg.btn-outline-danger{
+    color: var(--tiny1-orange);
+    border-color: var(--tiny1-orange);
+    transition: background-color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 
-#car_info{
-    padding: 10px 10px 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(143px, 1fr));
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+.text-center .btn.btn-lg.btn-outline-danger:hover{
+    color: var(--whyte);
+    background-color: var(--tiny1-orange);
 }
 
-#car_info > div{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 10px;
-}
 
-#car_info > div *{
-    margin: 0;
-}
-
-@media (width >= 700px) {
-    #detail{
-        width: 100%;
-        height: 83lvh;
-    }
-}
 
 /* About Page */
 .about-top{
