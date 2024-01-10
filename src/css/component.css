@@ -1,8 +1,10 @@
 :root {
     --orange: orangered;
-    --tiny1-orange: rgba(255, 68, 0, 0.7);
+    --tiny1-orange: rgba(255, 0, 0, 1);
     --tiny-orange: rgba(255, 68, 0, 0.267);
     --dark: rgb(28,29,28);
+    --whyte: rgba(255, 255, 255, 1);
+    --font-family: 'Courier New', Courier, monospace;
 }
 
 /* GeneralS */
@@ -30,28 +32,28 @@ a {
     z-index: 2;
 }
 
-#header-header {
-    padding: 0 40px;
+#header-first-div{
     display: flex;
-    justify-content: space-evenly;
     background-color: var(--dark);
-    width: 100%;
-    position: static;
-    top: 0;
+    color: #fff;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#contacts {
+#contacts, #socials{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
-    align-items: center;
-    color: white;
 }
 
 .social-list {
     padding-top: 5px;
     display: flex;
     gap: 20px;
+}
+
+svg{
+    color: var(--whyte);
 }
 
 .header-contact {
@@ -283,3 +285,62 @@ form > input[type=text]::placeholder{
     background-color: var(--dark);
 }
 
+/* CarouselB */
+* { 
+	box-sizing: border-box; 
+} 
+
+.body { 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+} 
+
+.carousel { 
+	position: relative; 
+	width: 270px; 
+	height: 160px; 
+	overflow: hidden; 
+	background-color: #cdcdcd; 
+} 
+
+.carousel-item .slide-image { 
+	width: 270px; 
+	height: 160px; 
+	background-size: cover; 
+	background-repeat: no-repeat; 
+} 
+
+.carousel-item { 
+	position: absolute; 
+	width: 100%; 
+	height: 270px; 
+	border: none; 
+	top: 0; 
+	left: 100%; 
+} 
+
+.carousel-item.active { 
+	left: 0; 
+	transition: all 0.3s ease-out; 
+} 
+
+.carousel-item div { 
+	height: 100%; 
+} 
+
+.red { 
+	background-color: red; 
+} 
+
+.green { 
+	background-color: green; 
+} 
+
+.yellow { 
+	background-color: yellow; 
+} 
+
+.violet { 
+	background-color: violet; 
+}

@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <>
-        <div id='header-header'>
+      <div id='header-first-div'>
           <div id='contacts'>
               <div className='header-contact'>
                 <span>
@@ -31,14 +31,14 @@ const Header = () => {
               </div>
           </div>
 
-          <div className="socials">
+          <div id="socials">
                     <ul className='social-list'>
                       <li><a href="https://fb.me/nnaezitech"><BiLogoFacebook /></a></li>
                       <li><a href="https://twitter.com/nnaezitech"><AiOutlineTwitter /></a></li>
                       <li><a href="https://instagram.com/nnaezitech"><BiLogoInstagram /></a></li>
                       <li><a href="http://linkedin.com/in/nnaezitech"><BiLogoLinkedin /></a></li>
                   </ul>
-            </div>
+          </div>
       </div>
 
         <Navbar bg='light' expand="lg"className='navbar'>
