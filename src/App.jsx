@@ -4,7 +4,7 @@ import About from './Pages/About'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Routes, Route} from 'react-router-dom'
 import NotFound from "./Pages/NotFound";
-import Listing from "../src/Pages/Listing.jsx";
+import Listing from "/src/Pages/Listing";
 import Contact  from "./Pages/Contact";
 import Detail from "./Pages/Detail";
 

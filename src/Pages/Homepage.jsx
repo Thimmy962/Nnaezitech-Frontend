@@ -81,19 +81,19 @@ const Homepage = () => {
 
         <div className="services-body">
           <div className="services" ref={(el) => (serviceListRefs.current[0] = el)}>
-            <img src="../src/assets/oil.svg" alt="" />
+            <img src="/oil.svg" alt="" />
             <p>OIL CHANGES</p>
             <p>Regular oil and filter changes help your engine run smoothly and efficiently.</p>
           </div>
 
           <div className="services" ref={(el) => (serviceListRefs.current[1] = el)}>
-            <img src="../src/assets/brakes.svg" alt="" />
+            <img src="/brakes.svg" alt="" />
             <p>ABS BRAKES</p>
             <p>Brake maintenance is essential for safe vehicle operation and longevity.</p>
           </div>
 
           <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[2] = el)}>
-            <img src="../src/assets/transmission.svg" alt="transmission" />
+            <img src="/transmission.svg" alt="transmission" />
             <p>TRANSMISSION SERVICE</p>
             <p>A maintained transmission will extend your vehicle's life and save money.</p>
           </div>
