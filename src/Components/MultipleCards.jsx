@@ -15,7 +15,7 @@ const MultipleCards = ({ cars }) => {
                                 <Card.Img src={`${API_BASE_URL}${car.car_image[0]}`} style={{ width: "100%", height: "100%", objectFit: "cover"}} />
 
                                 ) : (
-                                <Card.Img src='src/assets/download.jpeg' alt={`${car.name}`}  variant='top' style={{ width: "100%", height: "100%" }}/>
+                                <Card.Img src='/download.jpeg' alt={`${car.name}`}  variant='top' style={{ width: "100%", height: "100%" }}/>
                             )}
                         </div>
                         <Card.Body>

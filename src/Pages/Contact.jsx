@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div id='contact-page'>
         <div className="contact">
-          <img src="src/assets/Mercedes-Benz-Free-PNG-Image.png" alt="" />
+          <img src="/Mercedes-Benz-Free-PNG-Image.png" alt="" />
           <div className='contact-word'>
               <div>
                   <div className="contact-us">

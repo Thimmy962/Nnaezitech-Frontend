@@ -56,10 +56,6 @@ const GetInTouch = () => {
                     </div>
                 </div>
             </div>
-
-            <div className="img-div">
-                <img src="src/assets/Mercedes-Benz-Free-PNG-Image.png" alt="" className='in-touch-img'/>
-            </div>
         </div>
   </div>
   )

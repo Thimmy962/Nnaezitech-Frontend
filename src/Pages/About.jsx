@@ -7,7 +7,7 @@ const About = () => {
     <>
         <div className='about-top'>
             <div className='about-top-inner-1'>
-                <img src="src/assets/Mercedes-Benz-sedan-black.png" alt=""/>
+                <img src="/Mercedes-Benz-sedan-black.png" alt=""/>
             </div>
             <div className="about-top-inner-2">
                 <div className='text-center'>
@@ -48,7 +48,7 @@ const About = () => {
                 <div className="people">
                     <div className="human">
                         <div className="image">
-                                <img src="src/assets/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
+                                <img src="/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
                         </div>
                         <div className="info">
                             <p className="name">John Harrison</p>
@@ -58,7 +58,7 @@ const About = () => {
 
                     <div className="human">
                         <div className="image">
-                            <img src="src/assets/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
+                            <img src="/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
                         </div>
                         <div className="info">
                             <p className="name">John Harrison</p>
@@ -68,7 +68,7 @@ const About = () => {
 
                     <div className="human">
                         <div className="image">
-                            <img src="src/assets/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
+                            <img src="/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
                         </div>
                         <div className="info">
                             <p className="name">John Harrison</p>
