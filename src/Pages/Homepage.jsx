@@ -109,7 +109,7 @@ const Homepage = () => {
                             <div key={index} className='inventory'>
                               {inventory.car_image ? <img src={`${API_BASE_URL}${inventory.car_image[0]}`} alt="" lazy = 'true'/>
                               :
-                                <img src='../assets/download.jpeg' />
+                                <img src='src/assets/download.jpeg' alt='No Image'/>
                               }
                               <p>{inventory.name}</p>
                             </div>
