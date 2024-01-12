@@ -35,7 +35,7 @@ const Homepage = () => {
           }
         });
       },
-      { threshold: 0.2} // Adjust the threshold as needed
+      { threshold: 0.2}
     );
 
     serviceListRefs.current.forEach((ref) => {
@@ -65,8 +65,8 @@ const Homepage = () => {
             At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price
           </div>
           <div className="text-center">
-            <Link to="/contact" type="button" className="btn btn-lg btn-danger">
-              Contact
+            <Link to="/listing" type="button" className="btn btn-lg btn-danger">
+              Inventory
             </Link>
           </div>
         </div>

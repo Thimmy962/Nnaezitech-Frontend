@@ -53,7 +53,7 @@ const Detail = () => {
                         </div>
 
                         <div>
-                            <p className='car_info'><strong>{car.price}</strong></p>
+                            <p className='car_info'><strong>&#8358;{car.price}</strong></p>
                             <p className='car_attribute'>Price</p>
                         </div>
 

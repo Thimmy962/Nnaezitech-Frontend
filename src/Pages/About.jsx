@@ -1,8 +1,43 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import GetInTouch from '../Components/GetInTouch'
 
 
 const About = () => {
+
+    const serviceListRefs = useRef([]);
+
+    useEffect(() => {    
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+              } else {
+                entry.target.classList.remove('show');
+              }
+            });
+          },
+          { threshold: 0.5}
+        );
+    
+        serviceListRefs.current.forEach((ref) => {
+          if (ref) {
+            observer.observe(ref);
+          }
+        });
+    
+    
+        return () => {
+          serviceListRefs.current.forEach((ref) => {
+            if (ref) {
+              observer.unobserve(ref);
+            }
+          });
+          // observer.disconnect();
+        };
+      }, []);
+    
+
   return (
     <>
         <div className='about-top'>
@@ -21,7 +56,7 @@ const About = () => {
             </div>
         </div>
 
-        <div className='about-div-2'>
+        <div className='about-div-2' ref={(el) => (serviceListRefs.current[0] = el)}>
 
             <div>
                 A Leading Car Dealer For Over 30 Years
@@ -46,7 +81,7 @@ const About = () => {
                 </div>
 
                 <div className="people">
-                    <div className="human">
+                    <div className="human" ref={(el) => (serviceListRefs.current[1] = el)}>
                         <div className="image">
                                 <img src="/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
                         </div>
@@ -56,7 +91,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="human">
+                    <div className="human" ref={(el) => (serviceListRefs.current[2] = el)}>
                         <div className="image">
                             <img src="/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
                         </div>
@@ -66,7 +101,7 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="human">
+                    <div className="human" ref={(el) => (serviceListRefs.current[3] = el)}>
                         <div className="image">
                             <img src="/Mercedes-Benz-sedan-black.png" alt="" className='human-img'/>
                         </div>

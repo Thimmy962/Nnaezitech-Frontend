@@ -220,6 +220,7 @@ nav .nav-link {
     justify-content: center;
     width: 100%;
     gap: 20px;
+    padding: 10px 0;
 }
 
 #sidebar > div{
@@ -247,7 +248,7 @@ nav .nav-link {
 /* Form Component */
 
 .form{
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .form form {
