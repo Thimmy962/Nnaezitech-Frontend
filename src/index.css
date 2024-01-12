@@ -212,11 +212,7 @@ div.accordion h2 > .accordion-button{
 
 .move
 {
-    animation-name: show;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 700ms;
+    animation: show 700ms linear 1 forwards;
     will-change: transform;
 }
 
@@ -684,13 +680,12 @@ background-color: rgba(255, 255, 255, .9);
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
     justify-content: center;
-    margin: 40px 0;
-    padding: 0 20px;
+    padding: 70px 0 20px;
 }
 
 #car_info > div{
     display: grid;
-    margin-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 
