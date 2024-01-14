@@ -41,9 +41,6 @@ const About = () => {
   return (
     <>
         <div className='about-top'>
-            <div className='about-top-inner-1'>
-                <img src="/Mercedes-Benz-sedan-black.png" alt=""/>
-            </div>
             <div className="about-top-inner-2">
                 <div className='text-center'>
                     <div>About US</div>

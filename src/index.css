@@ -406,7 +406,8 @@ div.accordion h2 > .accordion-button{
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-duration: 1.5s;
-    animation-delay: 500ms;
+
+    animation: show-about-top 1500ms linear 1 forwards;
 }
 
 @keyframes show-about-top {
@@ -466,12 +467,7 @@ div.accordion h2 > .accordion-button{
     color: white;
     line-height: 2;
     opacity: 0;
-    animation-name: aboutpage-move-right;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 1.5s;
-    animation-delay: 1000ms;
+    animation: aboutpage-show-top 1500ms linear 1500ms 1 forwards;
 }
 
 
@@ -530,13 +526,7 @@ background-color: rgba(255, 255, 255, .9);
     justify-content: center;
     gap: 20px;
     padding-top: 20px;
-}
-
-.image{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+    overflow: hidden;
 }
 
 .people .human{
@@ -546,8 +536,9 @@ background-color: rgba(255, 255, 255, .9);
     align-items: center;
     gap: 50px;
     width: 100%;
-    transform: translateX(100px);
+    overflow: hidden;
     opacity: 0;
+    transform: translateX(50px);
     transition: transform 500ms ease-in-out;
 }
 
@@ -613,51 +604,19 @@ background-color: rgba(255, 255, 255, .9);
     }
 }
 
-@keyframes aboutpage-move-right{
+@keyframes aboutpage-show-top{
     0%{
         opacity: 0;
-        margin-left: 0;
     }
     50%{
         opacity: .5;
-        margin-left: 5em;
     }
     100%{
         opacity: 1;
-        margin-left: 10em;
     }
 }
 
-@keyframes aboutpage-move-left{
-    0%{
-        opacity: 0;
-        margin-left: 0;
-    }
-    50%{
-        opacity: .5;
-        margin-left: 2.5em;
-    }
-    100%{
-        opacity: 1;
-        margin-left: 4em;
-    }
-}
 
-@keyframes aboutpage-move-left{
-    0%{
-        opacity: 1;
-        margin-left: 0;
-    }
-
-    50%{
-        opacity: 1;
-        margin-left: 2em;
-    }
-    100%{
-        opacity: 1;
-        margin-left: 0;
-    }
-}
 
 /* Detials Page */
 #detail{
@@ -666,14 +625,16 @@ background-color: rgba(255, 255, 255, .9);
     background-color: white;
 }
 
+
 #detail .carousel{
     width: 100%;
-    height: 60vh;
+    min-height: 40vh;
+    max-height: 50vh;
+    padding: 20px 0 0;
 }
 
 #detail .carousel.slide{
-    object-fit: cover;
-    padding-top: 50px;
+    object-fit: contain;
 }
 
 #car_info{
