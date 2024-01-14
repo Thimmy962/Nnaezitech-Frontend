@@ -7,6 +7,10 @@
     --font-family: 'Courier New', Courier, monospace;
 }
 
+*{
+    color: white;
+}
+
 /* GeneralS */
 li {
     list-style: none;
@@ -27,7 +31,6 @@ a {
 #header-component{
     position: sticky;
     top: 0;
-    background-color: #fff;
     width: 100%;
     z-index: 2;
 }
@@ -35,7 +38,6 @@ a {
 #header-first-div{
     display: flex;
     background-color: var(--dark);
-    color: #fff;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -126,116 +128,131 @@ nav .nav-link {
 
 
 /* Get in Touch */
-
-#get-in-touch {
-    padding: 50px 0 0;
-    color: white;
-    font-family: oswald;
-    position: relative;
-}
-
-#hours-location {
-    background: linear-gradient(rgba(0, 0, 0, .8), rgba(255, 68, 0, 0.6));
-    /* display: grid; */
-    row-gap: 70px;
-    padding-top: 100px;
-    position: relative;
-    overflow: hidden;
-}
-
-#overlay-2 {
+#footer{
     width: 100%;
+    background-color: rgba(0, 0, 0, .7);
 }
 
-.img-div{
-    width: 100%;
-    height: 100%;
-}
-
-.in-touch-img{
-    width: 100%;
-    height: 100%;
-    opacity: .1;
-    position: absolute;
-    transform: scale(4);
-    top: 0;
-}
-
-#get-in-touch-button{
-    margin: 20px 0;
-    background-color: rgba(0, 0, 0, .8);
-    color: red;
-    border: 1px solid rgba(0, 0, 0, .8);
-}
-
-#get-in-touch-button:hover{
-    cursor: crosshair;
-}
-
-@media (width >=950px) {
-    #hours-location {
-        height: auto;
-        margin-top: 100px;
-        flex: 1;
-    }
-}
-
-.location-hour {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hour {
-    padding-right: 60px;
-}
-
-.in-touch-header {
+#get-in-touch{
     display: grid;
-    align-items: center;
     justify-content: center;
-    row-gap: 10px;
+    gap: 20px;
+    padding: 50px 0;
 }
 
-.header-item {
-    font-size: 30px;
-    font-weight: 600;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif !important;
+#get-in-touch > div{
+    padding: 0 20px 0 15px;
+
 }
 
-@media (width >=450px) {
-    .location-hour {
+
+.nnaezi > div:nth-of-type(1){
+    font-size: 35px;
+    color: white;
+}
+
+.footer-header{
+    margin-bottom: 50px;
+}
+
+
+.nnaezi > div:nth-of-type(2){
+    font-size: 18px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.nnaezi > div:nth-of-type(3){
+    color: white;
+    position: relative;
+}
+
+
+.social-lists{
+    display: flex;
+    gap: 30px;
+    position: relative;
+    left: -40px;
+}
+
+
+.links .inside, .contacts .inside{
+    font-size: 18px;
+    align-items: center;
+    color: var(--tiny1-orange);
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--tiny1-orange);
+    font-style: oblique;
+}
+
+.links-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    left: -20px;
+}
+
+.links-list li{
+    width: 40%;
+    color: white;
+    transition: padding-left 500ms ease;
+}
+
+li a{
+    color: white;
+}
+
+
+
+.links-list li:hover{
+    padding-left: 20px;
+}
+
+.address > div:nth-of-type(2) p{
+    margin: 0;
+}
+
+.margin-bottom{
+    margin-bottom: 30px;
+}
+
+.footer-end{
+    padding-left: 15px;
+    font-size: 17px;
+}
+
+.footer-end div{
+    min-width: 350px;
+}
+
+.footer-end > div:nth-of-type(1)
+{
+    text-align: center;
+}
+
+.footer-end > div:nth-of-type(2)
+{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+ 
+@media (width >= 800px) {
+    #get-in-touch{
+        width: 85%;
+        margin: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-end{
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: baseline;
+        justify-content: space-between;
+        width: 85%;
+        margin: auto;
     }
 }
-
-
-/* Side Bar */
-#sidebar{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    gap: 20px;
-    padding: 10px 0;
-}
-
-#sidebar > div{
-    padding: 0 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#sidebar > div:hover {
-    color: orangered;
-    cursor: pointer;
-    background-color: rgba(233, 233, 228, 0.3);
-}
-
 
 
 /* Back Component */
@@ -288,64 +305,4 @@ form > input[type=text]::placeholder{
 
 .carousel.slide{
     background-color: var(--dark);
-}
-
-/* CarouselB */
-* { 
-	box-sizing: border-box; 
-} 
-
-.body { 
-	display: flex; 
-	justify-content: center; 
-	align-items: center; 
-} 
-
-.carousel { 
-	position: relative; 
-	width: 270px; 
-	height: 160px; 
-	overflow: hidden; 
-	background-color: #cdcdcd; 
-} 
-
-.carousel-item .slide-image { 
-	width: 270px; 
-	height: 160px; 
-	background-size: cover; 
-	background-repeat: no-repeat; 
-} 
-
-.carousel-item { 
-	position: absolute; 
-	width: 100%; 
-	height: 270px; 
-	border: none; 
-	top: 0; 
-	left: 100%; 
-} 
-
-.carousel-item.active { 
-	left: 0; 
-	transition: all 0.3s ease-out; 
-} 
-
-.carousel-item div { 
-	height: 100%; 
-} 
-
-.red { 
-	background-color: red; 
-} 
-
-.green { 
-	background-color: green; 
-} 
-
-.yellow { 
-	background-color: yellow; 
-} 
-
-.violet { 
-	background-color: violet; 
 }

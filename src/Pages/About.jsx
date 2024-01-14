@@ -17,7 +17,7 @@ const About = () => {
               }
             });
           },
-          { threshold: 0.5}
+          { threshold: 0.4}
         );
     
         serviceListRefs.current.forEach((ref) => {
@@ -33,7 +33,7 @@ const About = () => {
               observer.unobserve(ref);
             }
           });
-          // observer.disconnect();
+          observer.disconnect();
         };
       }, []);
     
@@ -55,7 +55,7 @@ const About = () => {
 
         <div className='about-div-2' ref={(el) => (serviceListRefs.current[0] = el)}>
 
-            <div>
+            <div className='about-div-2-1'>
                 A Leading Car Dealer For Over 30 Years
             </div>
             

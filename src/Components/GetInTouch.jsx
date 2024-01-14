@@ -1,63 +1,85 @@
 import React, { useState } from 'react'
 import {API_BASE_URL} from './config'
 import { Link } from 'react-router-dom'
+import {BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin} from 'react-icons/bi'
+import {AiOutlineTwitter} from 'react-icons/ai'
+
 
 const GetInTouch = () => {
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [mail, setMail] = useState('')
-  const [message, setMessage] = useState("")
-  const body ={
-    "name": name,
-    "phone": phone,
-    "mail": mail,
-    "message": message
-  }
-
-  const submit = async (e) =>{
-    e.preventDefault()
-    let res = await fetch(`${API_BASE_URL}/new_message`,{
-      method: "POST",
-      headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(body)
-    })
-    let data = await res.json()
-    console.log(data)
-    setName(""); setMail(""); setPhone(""); setMessage("");
-  }
+  const date = new Date()
 
 
   return (
-    <div id="get-in-touch">
-        <div id="hours-location">
+    <div id='footer'>
+        <div id="get-in-touch">
+                  <div className='nnaezi'>
+                      <div className='footer footer-header'>
+                          Nnaezi
+                      </div>
 
-            <div id="overlay-2">
-                <div className="in-touch-header">
-                    <div className='in-touch-title header-item'>GET IN TOUCH</div>
-                    <div className="in-touch-number header-item">+2348038034835</div>
-                </div>
+                      <div>
+                          Nnaezi Repair, we're committed to earning your trust by providing the highest quality car repair services at a fair price.
+                      </div>
 
-                <div className='location-hour'>
-                    <div className="location">
-                        <h3 className='loaction-header'>Location</h3>
-                        <p>2345 Divi St</p>
-                        <p>San Francisco, CA 94222</p>
+                      <div id="nnaezi-socials">
+                                <ul className='social-lists'>
+                                  <li><a href="https://fb.me/nnaezitech"><BiLogoFacebook /></a></li>
+                                  <li><a href="https://twitter.com/nnaezitech"><AiOutlineTwitter /></a></li>
+                                  <li><a href="https://instagram.com/nnaezitech"><BiLogoInstagram /></a></li>
+                                  <li><a href="http://linkedin.com/in/nnaezitech"><BiLogoLinkedin /></a></li>
+                              </ul>
+                      </div>
+                  </div>
+
+                  <div className='links'>
+                    <div className='footer-header'>
+                        <div className='inside'>Useful Links</div>
                     </div>
 
-                    <div className="hour">
-                    <h3 className='hour-header'>Hours</h3>
-                    <p>Mon: 10am – 5pm</p>
-                    <p>Tue: 10am – 5pm</p>
-                    <p>Wed: 10am – 5pm</p>
-                    <p>Thur:10am – 5pm</p>
-                    <p>Fri: 10am – 3pm</p>
-                    <p>Sat: 10am – 5pm</p>
-                    <p>Sun: Closed</p>
+                    <ul className='links-list'>
+                        <li><Link to='/'>&raquo; Home</Link></li>
+                        <li><Link to='/listing'>&raquo; List</Link></li>
+                        <li><Link to='/about'>&raquo; About</Link></li>
+                        <li><Link to='/contact'>&raquo; Contact</Link></li>
+                    </ul>
+                  </div>
+
+                  <div className='address'>
+                    <div className='footer-header contacts'>
+                      <div className='inside'>Contact:</div>
                     </div>
-                </div>
+                    
+                    <div>
+                          <div className="address margin-bottom">
+                              <p>Address:</p>
+                              <p> 11 West Town, PBo 12345, United States</p>
+                          </div>
+
+                          <div className="phone margin-bottom">
+                              <p>Phone:</p>
+                              <p>08039918731</p>
+                          </div>
+
+                          <div className="mail">
+                            <p>Email:</p>
+                            <p>oluwatimileyin962@gmail.com</p>
+                          </div>
+                    </div>
+                  </div>
             </div>
-        </div>
-  </div>
+
+            <div className='footer-end'>
+                      <div className="footer-end-first">
+                        NnaeziTech &copy; {date.getFullYear()} - Designed by Thimmy
+                      </div>
+
+                      <div className="footer-end-second">
+                        <p>Terms & Conditions</p>
+                        <p>Privary Policy</p>
+                        <p>Contact</p>
+                      </div>
+                  </div>
+    </div>
   )
 }
 

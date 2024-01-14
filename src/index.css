@@ -1,4 +1,4 @@
-#root{
+#root {
     background-image: url('/porsche.jpg');
     background-size: cover;
     text-transform: capitalize;
@@ -9,16 +9,16 @@
 
 
 /* Listing Page */
-.listing{
+.listing {
     padding-bottom: 20px;
 }
 
-#listing{
+#listing {
     position: sticky;
     margin: 10px;
 }
 
-.cars{
+.cars {
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -27,53 +27,52 @@
     padding-top: 20px;
 }
 
-.cars #card{
+.cars #card {
     width: 18rem;
     text-align: center;
     height: 400px;
 }
 
-div.card-body *{
+div.card-body * {
     margin-bottom: 1px;
     color: var(--dark);
 }
 
-.card-body{
+.card-body {
     color: var(--dark);
 }
 
-.view-btn{
+.view-btn {
     transition: background-color ease-in 10ms;
     background: var(--dark);
     border: none;
 }
 
-.view-btn:hover{
+.view-btn:hover {
     background-color: var(--orange) !important;
 }
 
-div.accordion{
+div.accordion {
     display: none;
 }
 
-div.accordion-item
-{
+div.accordion-item {
     border: 1px solid var(--dark);
 }
 
-div.accordion h2 > .accordion-button{
+div.accordion h2>.accordion-button {
     color: var(--dark);
     background-color: white;
 }
 
 
-.accordion-button:focus{
+.accordion-button:focus {
     box-shadow: 0 0 0 0.05rem var(--dark) !important;
     background-color: white;
 
 }
 
-.inner-component{
+.inner-component {
     position: sticky;
     top: 45px;
     width: 100%;
@@ -81,63 +80,64 @@ div.accordion h2 > .accordion-button{
     background-color: rgba(255, 255, 255, .9);
 }
 
-.inner-component .company{
+.inner-component .company {
     color: var(--dark);
 }
 
-.inner-accordion-item{
+.inner-accordion-item {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.inner-accordion-item *{
+.inner-accordion-item * {
     transition: color 200ms ease-in;
 }
 
-.inner-accordion-item *:hover{
+.inner-accordion-item *:hover {
     cursor: pointer;
     color: orangered;
 }
 
-@media (width <= 800px) {
-    div.accordion{
+@media (width <=800px) {
+    div.accordion {
         display: block;
         padding: 0 20px;
     }
-    #sidebar, .form{
+
+    #sidebar,
+    .form {
         display: none;
     }
 
-    .inner-component{
+    .inner-component {
         padding: 20px;
     }
 }
 
 
 
-@media (width <= 600px) {
-    .cars #card{
+@media (width <=600px) {
+    .cars #card {
         width: 10rem;
         text-align: center;
         height: 400px;
     }
 
-    .inner-accordion-item .company{
+    .inner-accordion-item .company {
         color: orangered;
-    }  
-    
-    .accordion-header button.collapse{
+    }
+
+    .accordion-header button.collapse {
         color: orangered !important;
     }
 }
 
 /* Contact */
-.contact
-{
+.contact {
     height: 400px;
-    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0,0,0,1));
+    background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -145,7 +145,7 @@ div.accordion h2 > .accordion-button{
     position: relative;
 }
 
-.contact > .contact-word{
+.contact>.contact-word {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -156,10 +156,10 @@ div.accordion h2 > .accordion-button{
     align-items: center;
     color: white;
     gap: 0;
-    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0,0,0,.5));
+    background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .5));
 }
 
-.contact-word > div{
+.contact-word>div {
     row-gap: 20px;
     animation-name: show;
     animation-timing-function: linear;
@@ -170,55 +170,56 @@ div.accordion h2 > .accordion-button{
 }
 
 @keyframes show {
-    0%{
+    0% {
         transform: translateY(100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
-.contact > img{
+.contact>img {
     transform: scale(2);
 
 }
 
-.contact-us{
+.contact-us {
     font-size: 40px;
     font-weight: 400;
 }
 
 
-.contact .contact-us, .contact .long-word{
+.contact .contact-us,
+.contact .long-word {
     width: 80%;
     margin: auto;
 }
 
-#map{
+#map {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 @media (width > 750px) {
-    .contact .long-word{
+    .contact .long-word {
         width: 70%;
         margin: auto;
     }
-    
+
 }
 
-.move
-{
+.move {
     animation: show 700ms linear 1 forwards;
     will-change: transform;
 }
 
 
 /* Homepage Component */
-.homepage{
+.homepage {
     height: 80vh;
     background-image: url('/porsche.jpg');
     background-size: cover;
@@ -227,7 +228,7 @@ div.accordion h2 > .accordion-button{
     color: var(--whyte)
 }
 
-.homepage > div{
+.homepage>div {
     width: 100%;
     height: 100%;
     margin: auto;
@@ -238,29 +239,29 @@ div.accordion h2 > .accordion-button{
     background-color: rgba(0, 0, 0, .4);
 }
 
-.service{
+.service {
     font-size: 50px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
 }
 
-.maintenance{
+.maintenance {
     font-family: 'Courier New', Courier, monospace;
     font-size: 28px;
     font-weight: 600;
 }
 
 
-.nnaezi{
+.nnaezi {
     font-size: 25px;
     font-weight: 400;
 }
 
-.text-center{
+.text-center {
     margin-top: 50px;
 }
 
-.our-services{
+.our-services {
     width: 100%;
     min-height: 500px;
     padding-top: 50px;
@@ -268,77 +269,77 @@ div.accordion h2 > .accordion-button{
     background-color: rgba(239, 234, 234, 0.3);
 }
 
-.services-header{
+.services-header {
     width: 90%;
     margin: 50px auto;
 }
 
-.auto-repair{
+.auto-repair {
     text-transform: uppercase;
     font-size: 35px;
     font-weight: 500;
     color: #fff;
 }
 
-.wide-range{
+.wide-range {
     font-size: 28px;
     color: var(--tiny1-orange);
 }
 
-.services-body{
+.services-body {
     display: grid;
     padding: 20px;
 }
 
-.services-body p:nth-last-of-type(2){
+.services-body p:nth-last-of-type(2) {
     color: var(--tiny1-orange);
     font-size: 25px;
     font-weight: 500;
 }
 
-.services-body p:nth-last-of-type(1){
+.services-body p:nth-last-of-type(1) {
     font-size: 20px;
     font-weight: 400;
     color: var(--whyte);
 }
 
-.services-body .services{
+.services-body .services {
     opacity: 0;
     transition: 600ms ease-in-out;
     transform: translateY(50px);
 }
 
-.services-body .show{
+.services-body .show {
     opacity: 1;
     transform: translateY(0);
 
 }
 
-.services-body img{
+.services-body img {
     width: 150px;
     transition: scale, 250ms ease-in-out;
 }
 
-.services-body img:hover{
+.services-body img:hover {
     transform: scale(1.3);
 }
 
 
-@media (width >= 850px) {
-    .services-body{
+@media (width >=850px) {
+    .services-body {
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         justify-content: center;
         align-items: center;
     }
 
-    .third-on-grid img{
+    .third-on-grid img {
         width: 115px;
     }
 }
 
 
-.our-products{
+.our-products {
     width: 100%;
     text-align: center;
     position: relative;
@@ -346,7 +347,7 @@ div.accordion h2 > .accordion-button{
     background-position: center;
 }
 
-.our-products-inner-div{
+.our-products-inner-div {
     width: 90%;
     height: auto;
     margin: auto;
@@ -356,7 +357,7 @@ div.accordion h2 > .accordion-button{
 }
 
 
-.product-header .service{
+.product-header .service {
     margin-top: 60px;
     font-weight: 600;
     font-size: 40px;
@@ -364,32 +365,32 @@ div.accordion h2 > .accordion-button{
 }
 
 
-.inventory{
+.inventory {
     height: 650px;
     background-color: rgba(0, 0, 0, .5);
     padding-bottom: 20px;
     max-width: 400px;
 }
 
-.inventory img{
+.inventory img {
     width: 98%;
     height: 60%;
     border-radius: 20px;
     margin-bottom: 40px;
 }
 
-.inventory img:hover{
+.inventory img:hover {
     transform: scale(1.05);
 }
 
-.text-center .btn.btn-lg.btn-outline-danger{
+.text-center .btn.btn-lg.btn-outline-danger {
     color: var(--tiny1-orange);
     border-color: var(--tiny1-orange);
     transition: background-color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
 }
 
-.text-center .btn.btn-lg.btn-outline-danger:hover{
+.text-center .btn.btn-lg.btn-outline-danger:hover {
     color: var(--whyte);
     background-color: var(--tiny1-orange);
 }
@@ -397,51 +398,47 @@ div.accordion h2 > .accordion-button{
 
 
 /* About Page */
-.about-top{
+.about-top {
     position: relative;
     overflow: hidden;
     width: 100%;
-    animation-name: show-about-top;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 1.5s;
-
-    animation: show-about-top 1500ms linear 1 forwards;
+    animation: show-about-top 1000ms linear 1 forwards;
 }
 
 @keyframes show-about-top {
-    0%{
+    0% {
         opacity: 0;
-        height: 0;
+        min-height: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
-        height: 500px;
+        min-height: 500px;
+        padding: 40px 0;
     }
 }
 
-.about-top-inner-1{
+.about-top-inner-1 {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
-.about-top-inner-1 img{
+.about-top-inner-1 img {
     transform: scale(3);
 }
 
-.about-top-inner-2{
+.about-top-inner-2 {
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)), 
-        linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.1));
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)),
+        linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, .1));
 }
 
-.about-top-inner-2 > div{
+.about-top-inner-2>div {
     display: flex;
     flex-direction: column;
     width: 70%;
@@ -450,47 +447,44 @@ div.accordion h2 > .accordion-button{
     gap: 50px;
 }
 
-.about-top-inner-2 > div > div:nth-child(1){
+.about-top-inner-2>div>div:nth-child(1) {
     font-size: 70px;
     text-transform: uppercase;
     color: white;
     margin-left: 0;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 1s;
 }
 
 
-.about-top-inner-2 > div > div:nth-child(2){
+.about-top-inner-2>div>div:nth-child(2) {
     width: 90%;
     color: white;
     line-height: 2;
     opacity: 0;
-    animation: aboutpage-show-top 1500ms linear 1500ms 1 forwards;
+    animation: aboutpage-show-top 1500ms linear 1000ms 1 forwards;
 }
 
 
-.about-div-2{
-width: 100%;
-padding: 100px 100px;
-display: grid;
-gap: 50px;
-align-items: center;
-justify-content: center;
-background-color: rgba(255, 255, 255, .9);
+.about-div-2 {
+    width: 100%;
+    padding: 100px 0;
+    display: grid;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, .9);
 }
 
 
-.about-div-2 > div:nth-child(1)
-{
+.about-div-2-1 {
     text-align: center;
     font-size: 40px;
     width: 80%;
     margin: auto;
+    color: var(--dark);
+    font-style: oblique;
 }
 
-.about-div-2 > div:nth-child(2){
+.about-div-2>div:nth-child(2) {
     margin-bottom: 100px;
     display: grid;
     gap: 50px;
@@ -499,7 +493,7 @@ background-color: rgba(255, 255, 255, .9);
     transform: scale(1);
 }
 
-.about-div-2 > div:nth-child(2) p{
+.about-div-2>div:nth-child(2) p {
     text-align: center;
     width: 90%;
     margin: auto;
@@ -508,20 +502,20 @@ background-color: rgba(255, 255, 255, .9);
 }
 
 
-.about-div-3{
+.about-div-3 {
     width: 100%;
     background: linear-gradient(orange, orangered);
     padding: 20px 0;
 }
 
-.our-team{
+.our-team {
     font-size: 50px;
     padding: 50px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.people{
+.people {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -529,7 +523,7 @@ background-color: rgba(255, 255, 255, .9);
     overflow: hidden;
 }
 
-.people .human{
+.people .human {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -539,79 +533,83 @@ background-color: rgba(255, 255, 255, .9);
     overflow: hidden;
     opacity: 0;
     transform: translateX(50px);
-    transition: transform 500ms ease-in-out;
+    transition: all 500ms ease-in-out;
 }
 
-.people .show{
+.people .show {
     opacity: 1;
     transform: translateX(0);
 }
 
 
-.human-img{
+.human-img {
     width: 300px;
     height: 300px;
 }
 
-.human > div:nth-child(2){
+.human>div:nth-child(2) {
     text-align: center;
 }
 
-.human > div:nth-child(2) > p:nth-child(1){
+.human>div:nth-child(2)>p:nth-child(1) {
     font-size: 20px;
     font-weight: 900;
 }
 
-@media (width <= 500px) {
-    .about-top-inner-2 > div{
+@media (width <=500px) {
+    .about-top-inner-2>div {
         width: 100%;
     }
 
-    .about-top-inner-2 > div     > div:nth-child(1){
+    .about-top-inner-2>div>div:nth-child(1) {
         font-size: 40px;
         display: flex;
         justify-content: center;
     }
 
-    .about-top-inner-2 > div > div:nth-child(2){
+    .about-top-inner-2>div>div:nth-child(2) {
         display: flex;
         justify-content: center;
         padding: 0 4px;
         width: 100% !important;
     }
 
-    .about-div-2{
-        padding: 10px 10px;
+    .about-div-2 {
+        padding: 50px 10px;
     }
 
-    .about-div-2 > div{
+    .about-div-2 div {
         width: 100% !important;
         margin: 0;
         padding: 0;
     }
 
-    .about-div-2 > div P{
+    .about-div-2>div P {
         width: 100%;
     }
 }
-@media (width <= 950px){
-    .about-top-inner-2 > div > div:nth-child(2){
+
+@media (width <=950px) {
+    .about-top-inner-2>div>div:nth-child(2) {
         width: 90%;
         margin-left: 0 !important;
     }
-    .people{
+
+    .people {
         display: grid;
     }
 }
 
-@keyframes aboutpage-show-top{
-    0%{
+@keyframes aboutpage-show-top {
+    0% {
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: .5;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
@@ -619,55 +617,55 @@ background-color: rgba(255, 255, 255, .9);
 
 
 /* Detials Page */
-#detail{
+#detail {
     width: 80%;
     margin: auto;
     background-color: white;
 }
 
 
-#detail .carousel{
+#detail .carousel {
     width: 100%;
     min-height: 40vh;
     max-height: 50vh;
     padding: 20px 0 0;
 }
 
-#detail .carousel.slide{
+#detail .carousel.slide {
     object-fit: contain;
 }
 
-#car_info{
+#car_info {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
     justify-content: center;
     padding: 70px 0 20px;
 }
 
-#car_info > div{
+#car_info>div {
     display: grid;
     padding-bottom: 20px;
 }
 
 
-#car_info > div > p{
+#car_info>div>p {
     margin: 0;
 }
 
-#car_info > div > p:nth-child(2){
+#car_info>div>p:nth-child(2) {
     font-style: italic;
 }
 
 
-@media (width <= 800px) {
-    #detail{
+@media (width <=800px) {
+    #detail {
         width: 100%;
     }
 }
 
 
 /* Not Found */
-.not-found{
+.not-found {
     display: flex;
     justify-content: center;
     align-items: center;
