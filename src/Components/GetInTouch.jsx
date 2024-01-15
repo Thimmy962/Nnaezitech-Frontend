@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin} from 'react-icons/bi'
 import {AiOutlineTwitter} from 'react-icons/ai'
+import { IoMdMail } from "react-icons/io";
 import {MailIcon, FaPhoneAlt, HomeAddressIcon} from './svgs.jsx'
 
 
@@ -27,6 +28,7 @@ const GetInTouch = () => {
                                   <li><a href="https://twitter.com/nnaezitech"><AiOutlineTwitter /></a></li>
                                   <li><a href="https://instagram.com/nnaezitech"><BiLogoInstagram /></a></li>
                                   <li><a href="http://linkedin.com/in/nnaezitech"><BiLogoLinkedin /></a></li>
+                                  <li><a href="mailto:nwasukan@yahoo.com"><IoMdMail /></a></li>
                               </ul>
                       </div>
                   </div>
@@ -52,17 +54,18 @@ const GetInTouch = () => {
                     <div>
                           <div className="address margin-bottom">
                               <p>Address:</p>
-                              <p><span><HomeAddressIcon /></span> 11 West Town, PBo 12345, United States</p>
+                              <p><span><HomeAddressIcon /></span> &, Airport Close Mafoluku, Mafoluku, Oshodi, Lagos State</p>
                           </div>
 
                           <div className="phone margin-bottom">
                               <p>Phone:</p>
-                              <p><span className='svg'><FaPhoneAlt color='#ff0000'/></span>08039918731</p>
+                              <p><span className='svg'><FaPhoneAlt /></span>0803-328-7394</p>
+                              <p><span className="svg"><FaPhoneAlt /></span>0803-803-4835</p>
                           </div>
 
                           <div className="mail">
                             <p>Email:</p>
-                            <p><span className='svg'><MailIcon /></span>oluwatimileyin962@gmail.com</p>
+                            <p><span className='svg'><MailIcon /></span>nwasukan@yahoo.com</p>
                           </div>
                     </div>
                   </div>
