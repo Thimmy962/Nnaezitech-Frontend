@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import {API_BASE_URL} from './config'
 import { Link } from 'react-router-dom'
 import {BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin} from 'react-icons/bi'
 import {AiOutlineTwitter} from 'react-icons/ai'
+import {MailIcon, FaPhoneAlt, HomeAddressIcon} from './svgs.jsx'
 
 
 const GetInTouch = () => {
@@ -52,17 +52,17 @@ const GetInTouch = () => {
                     <div>
                           <div className="address margin-bottom">
                               <p>Address:</p>
-                              <p> 11 West Town, PBo 12345, United States</p>
+                              <p><span><HomeAddressIcon /></span> 11 West Town, PBo 12345, United States</p>
                           </div>
 
                           <div className="phone margin-bottom">
                               <p>Phone:</p>
-                              <p>08039918731</p>
+                              <p><span className='svg'><FaPhoneAlt color='#ff0000'/></span>08039918731</p>
                           </div>
 
                           <div className="mail">
                             <p>Email:</p>
-                            <p>oluwatimileyin962@gmail.com</p>
+                            <p><span className='svg'><MailIcon /></span>oluwatimileyin962@gmail.com</p>
                           </div>
                     </div>
                   </div>

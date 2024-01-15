@@ -54,9 +54,6 @@ a {
     gap: 20px;
 }
 
-svg{
-    color: var(--whyte);
-}
 
 .header-contact {
     display: flex;
@@ -216,6 +213,10 @@ li a{
 
 .margin-bottom{
     margin-bottom: 30px;
+}
+
+.address span{
+    margin-right: 5px;
 }
 
 .footer-end{
