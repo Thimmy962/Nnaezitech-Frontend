@@ -59,8 +59,16 @@ const GetInTouch = () => {
 
                           <div className="phone margin-bottom">
                               <p>Phone:</p>
-                              <p><span className='svg'><FaPhoneAlt /></span>0803-328-7394</p>
-                              <p><span className="svg"><FaPhoneAlt /></span>0803-803-4835</p>
+                              <p>
+                                  <a href="tel:08033287394" style={{color: 'white'}}>
+                                      <span className='svg'><FaPhoneAlt /></span>0803-328-7394
+                                  </a>
+                              </p>
+                              <p>
+                                  <a href="tel:08038034835" style={{color: 'white'}}>
+                                    <span className="svg"><FaPhoneAlt /></span>0803-803-4835
+                                  </a>
+                              </p>
                           </div>
 
                           <div className="mail">
