@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 #root {
     background-image: url('/porsche.jpg');
     background-size: cover;
@@ -107,39 +109,6 @@ div.accordion h2>.accordion-button {
     margin: auto;
 }
 
-@media (width <=800px) {
-    div.accordion {
-        display: block;
-        padding: 0 20px;
-    }
-
-    #sidebar,
-    .form {
-        display: none;
-    }
-
-    .inner-component {
-        padding: 20px;
-    }
-}
-
-
-
-@media (width <=600px) {
-    .cars #card {
-        width: 10rem;
-        text-align: center;
-        height: 400px;
-    }
-
-    .inner-accordion-item .company {
-        color: orangered;
-    }
-
-    .accordion-header button.collapse {
-        color: orangered !important;
-    }
-}
 
 /* Contact */
 .contact {
@@ -211,14 +180,6 @@ div.accordion h2>.accordion-button {
     justify-content: center;
 }
 
-@media (width > 750px) {
-    .contact .long-word {
-        width: 70%;
-        margin: auto;
-    }
-
-}
-
 .move {
     animation: show 700ms linear 1 forwards;
     will-change: transform;
@@ -226,6 +187,13 @@ div.accordion h2>.accordion-button {
 
 
 /* Homepage Component */
+.slider-container{
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
 .homepage {
     height: 80vh;
     background-image: url('/porsche.jpg');
@@ -273,7 +241,7 @@ div.accordion h2>.accordion-button {
     min-height: 500px;
     padding-top: 50px;
     text-align: center;
-    background-color: rgba(239, 234, 234, 0.3);
+    background-color: rgba(239, 234, 234, 0.4);
 }
 
 .services-header {
@@ -300,8 +268,8 @@ div.accordion h2>.accordion-button {
     align-items: center;
 }
 
-.services-body p:nth-last-of-type(2) {
-    color: var(--tiny1-orange);
+.services-body p:nth-of-type(1) {
+    color: #ce3b3b;
     font-size: 25px;
     font-weight: 500;
 }
@@ -331,23 +299,6 @@ div.accordion h2>.accordion-button {
 
 .services-body img:hover {
     transform: scale(1.3);
-}
-
-@media (width <= 700px) {
-    .our-products-inner-div{
-        width: 100% !important;
-    }
-}
-
-@media (width >=850px) {
-    .services-body {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-
-    .third-on-grid img {
-        width: 115px;
-    }
 }
 
 
@@ -415,6 +366,7 @@ div.accordion h2>.accordion-button {
     overflow: hidden;
     width: 100%;
     animation: show-about-top 1000ms linear 1 forwards;
+    font-family: Roboto;
 }
 
 @keyframes show-about-top {
@@ -425,92 +377,72 @@ div.accordion h2>.accordion-button {
 
     100% {
         opacity: 1;
-        min-height: 500px;
+        min-height: 300px;
         padding: 40px 0;
     }
 }
 
-.about-top-inner-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.about-top-inner-1 img {
-    transform: scale(3);
-}
-
-.about-top-inner-2 {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .6)),
-        linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, .1));
-}
-
-.about-top-inner-2>div {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: auto;
-    margin-top: 80px;
-    gap: 50px;
-}
 
 .about-top-inner-2>div>div:nth-child(1) {
     font-size: 70px;
     text-transform: uppercase;
     color: white;
     margin-left: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.about-div-2{
+    width: 100vw;
+    background-color: #fff;
 }
 
 
-.about-top-inner-2>div>div:nth-child(2) {
-    width: 90%;
-    color: white;
-    line-height: 2;
-    opacity: 0;
-    animation: aboutpage-show-top 1500ms linear 1000ms 1 forwards;
-}
-
-
-.about-div-2 {
-    width: 100%;
+.about-div-2 > div{
+    width: 90vw;
     padding: 100px 0;
     display: grid;
     gap: 50px;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255, 255, 255, .9);
-}
-
-
-.about-div-2-1 {
-    text-align: center;
-    font-size: 40px;
-    width: 80%;
     margin: auto;
-    color: var(--dark);
-    font-style: oblique;
 }
 
-.about-div-2>div:nth-child(2) {
-    margin-bottom: 100px;
+.about-div-2 #overview, .about-div-2 #philosophy{
     display: grid;
-    gap: 50px;
-    width: 80%;
-    margin: auto;
-    transform: scale(1);
 }
 
-.about-div-2>div:nth-child(2) p {
-    text-align: center;
-    width: 90%;
-    margin: auto;
+.overview-inner-1 p, .about-ul > li{
+    text-transform: none;
+}
+
+.about-img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+}
+
+.about-ul{
+    position: relative;
+    left: -35px;
+}
+.about-span{
+    margin-right: 10px;
+}
+
+
+
+.about-ul > li{
+    margin-bottom: 20px;
+}
+
+.overview-header, .philosophy-header{
+    color: var(--orange);
+    font-weight: 900;
+    font-family: 'Oswald', 'sans-serif';
     font-size: 20px;
-    color: rgb(49, 47, 47);
+    transform: scaleY(1.2);
+    margin-bottom: 20px;
+    
 }
 
 
@@ -568,6 +500,81 @@ div.accordion h2>.accordion-button {
     font-weight: 900;
 }
 
+
+@keyframes aboutpage-show-top {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* Detials Page */
+#detail {
+    width: 80%;
+    margin: auto;
+    background-color: white;
+}
+
+
+#detail .carousel {
+    width: 100%;
+}
+
+#detail .carousel.slide {
+    object-fit: cover;
+    padding: 10px 0;
+}
+
+#car_info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+    justify-content: center;
+    padding: 70px 0 20px;
+}
+
+.carousel-img{
+    height: 100%;
+}
+
+#car_info>div {
+    display: grid;
+    padding-bottom: 20px;
+
+}
+
+
+#car_info>div>p {
+    margin: 0;
+}
+
+#car_info>div>p:nth-child(2) {
+    font-style: italic;
+}
+
+
+/* Not Found */
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+
+/* @media */
 @media (width <=500px) {
     .about-top-inner-2>div {
         width: 100%;
@@ -601,6 +608,99 @@ div.accordion h2>.accordion-button {
     }
 }
 
+
+
+@media (max-width: 600px) {
+    .cars #card {
+        width: 10rem;
+        text-align: center;
+        height: 400px;
+    }
+
+    .inner-accordion-item .company {
+        color: orangered;
+    }
+
+    .accordion-header button.collapse {
+        color: orangered !important;
+    }
+}
+
+
+@media (width <= 700px) {
+    .our-products-inner-div{
+        width: 100% !important;
+    }
+}
+
+
+
+@media (width > 750px) {
+    .contact .long-word {
+        width: 70%;
+        margin: auto;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+    div.accordion {
+        display: block;
+        padding: 0 20px;
+    }
+
+    #sidebar.sidebar,
+    .form {
+        display: none !important;
+    }
+
+    .inner-component {
+        padding: 20px;
+    }
+
+    #detail {
+        width: 100%;
+    }
+}
+
+
+
+@media (width >=850px) {
+    .services-body {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .third-on-grid img {
+        width: 115px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .about-div-2 #overview, .about-div-2 #philosophy{
+        grid-template-columns: repeat(6, 1fr);
+        gap: 50px;
+    }
+
+    .overview-inner-1{
+        grid-column: 1 / span 4;
+    }
+
+    .philosophy-inner-1{
+        grid-column: 3 / -1;
+    }
+
+    .philosophy-inner-2{
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+}
+
+
+
 @media (width <=950px) {
     .about-top-inner-2>div>div:nth-child(2) {
         width: 90%;
@@ -610,80 +710,4 @@ div.accordion h2>.accordion-button {
     .people {
         display: grid;
     }
-}
-
-@keyframes aboutpage-show-top {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: .5;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
-
-/* Detials Page */
-#detail {
-    width: 80%;
-    margin: auto;
-    background-color: white;
-}
-
-
-#detail .carousel {
-    width: 100%;
-    min-height: 40vh;
-    max-height: 50vh;
-    padding: 20px 0 0;
-}
-
-#detail .carousel.slide {
-    object-fit: contain;
-}
-
-#car_info {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
-    justify-content: center;
-    padding: 70px 0 20px;
-}
-
-#car_info>div {
-    display: grid;
-    padding-bottom: 20px;
-}
-
-
-#car_info>div>p {
-    margin: 0;
-}
-
-#car_info>div>p:nth-child(2) {
-    font-style: italic;
-}
-
-
-@media (width <=800px) {
-    #detail {
-        width: 100%;
-    }
-}
-
-
-/* Not Found */
-.not-found {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-    color: white;
-    text-align: center;
-    text-transform: capitalize;
-
 }

@@ -53,27 +53,27 @@ const GetInTouch = () => {
                     
                     <div>
                           <div className="address margin-bottom">
-                              <p>Address:</p>
-                              <p><span><HomeAddressIcon /></span> &, Airport Close Mafoluku, Mafoluku, Oshodi, Lagos State</p>
+                              <p className='color-white'>Address:</p>
+                              <p className='color-white'><span><HomeAddressIcon /></span> 7, Airport Close Mafoluku, Mafoluku, Oshodi, Lagos State</p>
                           </div>
 
                           <div className="phone margin-bottom">
-                              <p>Phone:</p>
+                              <p className='color-white'>Phone:</p>
                               <p>
-                                  <a href="tel:08033287394" style={{color: 'white'}}>
-                                      <span className='svg'><FaPhoneAlt /></span>0803-328-7394
+                                  <a href="tel:08033287394" className='color-white'>
+                                      <span className='svg color-white'><FaPhoneAlt /></span>0803-328-7394
                                   </a>
                               </p>
                               <p>
-                                  <a href="tel:08038034835" style={{color: 'white'}}>
-                                    <span className="svg"><FaPhoneAlt /></span>0803-803-4835
+                                  <a href="tel:08038034835" className='color-white'>
+                                    <span className="svg color-white"><FaPhoneAlt /></span>0803-803-4835
                                   </a>
                               </p>
                           </div>
 
                           <div className="mail">
-                            <p>Email:</p>
-                            <p><span className='svg'><MailIcon /></span>nwasukan@yahoo.com</p>
+                            <p className='color-white'>Email:</p>
+                            <p className='color-white'><span className='svg'><MailIcon /></span>nwasukan@yahoo.com</p>
                           </div>
                     </div>
                   </div>
@@ -81,12 +81,12 @@ const GetInTouch = () => {
 
             <div className='footer-end'>
                       <div className="footer-end-first">
-                        NnaeziTech &copy; {date.getFullYear()} - Designed by Thimmy
+                        NnaeziTech &copy; {date.getFullYear()} - Designed by <i style={{textDecoration: "overline"}}>Thimmy</i>
                       </div>
 
                       <div className="footer-end-second">
                         <p>Terms & Conditions</p>
-                        <p>Privary Policy</p>
+                        <p>Privacy Policy</p>
                         <p>Contact</p>
                       </div>
                   </div>

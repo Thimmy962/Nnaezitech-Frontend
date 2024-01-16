@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import { API_BASE_URL } from '../Components/config';
 import GetInTouch from '../Components/GetInTouch';
+import HMPGCarousel from '../Components/HMPGCarousel';
 
 const Homepage = () => {
   const [newInventory, setNewInventory] = useState([]);
@@ -35,7 +36,7 @@ const Homepage = () => {
           }
         });
       },
-      { threshold: 0.2}
+      { threshold: 0.4}
     );
 
     serviceListRefs.current.forEach((ref) => {
@@ -55,21 +56,15 @@ const Homepage = () => {
     };
   }, []);
 
+  const slides = [
+    {url: '/car-interior.jpg', title:'Porsche'},
+    {url: '/bmw-half.jpg', title: 'Brakes'},
+]
+
   return (
     <>
-      <div className="homepage">
-        <div>
-          <div className="maintenance">BEST CAR SALES</div>
-          <div className="service">Sales</div>
-          <div className="nnaezi">
-            At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price
-          </div>
-          <div className="text-center">
-            <Link to="/listing" type="button" className="btn btn-lg btn-danger">
-              Inventory
-            </Link>
-          </div>
-        </div>
+      <div className="slider-container">
+        <HMPGCarousel slides = {slides}/>
       </div>
 
       <div className="our-services">
@@ -97,6 +92,26 @@ const Homepage = () => {
             <p>TRANSMISSION SERVICE</p>
             <p>A maintained transmission will extend your vehicle's life and save money.</p>
           </div>
+         
+          <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[3] = el)}>
+            <img src="/AC.svg" alt="A/C" />
+            <p>A/C SERVICES</p>
+            <p>A maintained transmission will extend your vehicle's life and save money.</p>
+          </div>
+
+
+          <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[4] = el)}>
+            <img src="/carwash.svg" alt="Wash and Clean" />
+            <p>Wash and Clean</p>
+            <p>Keeping your car clean, washing regularly can improve gas mileage, extend paint life</p>
+          </div>
+
+          <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[5] = el)}>
+            <img src="/engine.svg" alt="Engine Servie" />
+            <p>Engine Service</p>
+            <p>A well-tuned engine delivers optimal performance and fuel efficiency.</p>
+          </div>
+
         </div>
       </div>
 
