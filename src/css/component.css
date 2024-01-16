@@ -325,26 +325,7 @@ form>input[type=text]::placeholder {
 }
 
 
-.arrows {
-    position: absolute;
-    top: 45%;
-    opacity: 0;
-    transition: opacity 500ms ease-in
-}
 
-.slider-container:hover .arrows,
-.slider-container:hover .bullet {
-    opacity: 1;
-}
-
-.arrows.left {
-    left: 50px;
-}
-
-
-.arrows.right {
-    right: 50px;
-}
 
 .bullet {
     position: absolute;
@@ -352,6 +333,5 @@ form>input[type=text]::placeholder {
     width: 100%;
     display: flex;
     justify-content: center;
-    opacity: 0;
-    transition: opacity 500ms ease-in
+    opacity: 1;
 }

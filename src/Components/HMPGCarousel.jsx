@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { LeftArrow, RightArrow,CarouselBullet } from "./svgs";
+import {Link} from 'react-router-dom'
 
 const HMPGCarousel = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,19 +29,23 @@ const HMPGCarousel = ({ slides }) => {
 
   }
 
-  useEffect(() => {
-    const intervalId = setInterval(goToNext, 5000);
-
-
-    return () => clearInterval(intervalId);
-  }, [currentIndex]);
-
 
   return (
     <div className="HMPG">
-        <div className="arrows left" onClick={goToPrevious}><LeftArrow  /></div>
-        <div className="arrows right" onClick={goToNext}><RightArrow /></div>
-        <div style={styles} className="carousel-div"> <h2>{slides[currentIndex].title}</h2></div>
+        <div style={styles} className="carousel-div homepage">
+           <div>
+                <div className="maintenance">{slides[currentIndex].title}</div>
+                <div className="service">{slides[currentIndex].contentA}</div>
+                <div className="nnaezi">
+                    {slides[currentIndex].contentB}
+                </div>
+                <div className="text-center">
+                    <Link to="/listing" type="button" className="btn btn-lg btn-danger">
+                    Inventory
+                    </Link>
+                </div>
+           </div>
+        </div>
         <div className="bullet">
         {slides.map((slide, index) => (
                 <div key={index} className="carousel-bullet" onClick = {() => setCurrentIndex(index)}><CarouselBullet /></div>

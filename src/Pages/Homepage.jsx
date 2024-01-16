@@ -57,8 +57,8 @@ const Homepage = () => {
   }, []);
 
   const slides = [
-    {url: '/car-interior.jpg', title:'Porsche'},
-    {url: '/bmw-half.jpg', title: 'Brakes'},
+    {url: '/car-interior.jpg', title:'BEST CAR SALES', contentA: 'Sales', contentB: "At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price"},
+    {url: '/bmw-half.jpg', title: 'Best Car Maintenance Services', contentA: 'Service and Repair', contentB: 'At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price'},
 ]
 
   return (
