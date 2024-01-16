@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { LeftArrow, RightArrow,CarouselBullet } from "./svgs";
+import { CarouselBullet, CarouselBulletWhite } from "./svgs";
 import {Link} from 'react-router-dom'
 
 const HMPGCarousel = ({ slides }) => {
@@ -48,7 +48,11 @@ const HMPGCarousel = ({ slides }) => {
         </div>
         <div className="bullet">
         {slides.map((slide, index) => (
-                <div key={index} className="carousel-bullet" onClick = {() => setCurrentIndex(index)}><CarouselBullet /></div>
+                index === currentIndex ?
+                (<div key={index} className="carousel-bullet" onClick = {() => setCurrentIndex(index)}><CarouselBulletWhite /></div>)
+
+                :
+                (<div key={index} className="carousel-bullet" onClick = {() => setCurrentIndex(index)}><CarouselBullet /></div>)
             ))}
         </div>
     </div>
