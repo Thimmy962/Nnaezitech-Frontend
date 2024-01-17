@@ -341,11 +341,12 @@ div.accordion h2>.accordion-button {
 
 /* About Page */
 .about-top {
-    position: relative;
-    overflow: hidden;
     width: 100%;
     animation: show-about-top 1000ms linear 1 forwards;
     font-family: Roboto;
+    background-image: url('/aboutUs.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 @keyframes show-about-top {
@@ -440,9 +441,6 @@ div.accordion h2>.accordion-button {
 }
 
 .people {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
     padding-top: 20px;
     overflow: hidden;
 }
@@ -682,6 +680,12 @@ div.accordion h2>.accordion-button {
         grid-row: 1;
     }
 
+    .people {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
 }
 
 
@@ -690,9 +694,5 @@ div.accordion h2>.accordion-button {
     .about-top-inner-2>div>div:nth-child(2) {
         width: 90%;
         margin-left: 0 !important;
-    }
-
-    .people {
-        display: grid;
     }
 }

@@ -6,17 +6,6 @@ import {Fade, Zoom, Slide} from 'react-slideshow-image'
 
 const HMPGCarousel = ({slides}) => {
 
-    const divStyle = {
-        // height: '600px',
-        // color: 'white',
-        // textAlign: 'center',
-        // display: 'flex',
-        // flexDirection:'column',
-        // alignItems: 'center',
-        // justify
-
-    }
-
   return (
     <>
       <Zoom>
