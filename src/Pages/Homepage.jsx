@@ -96,7 +96,7 @@ const Homepage = () => {
           <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[3] = el)}>
             <img src="/AC.svg" alt="A/C" />
             <p>A/C SERVICES</p>
-            <p>A maintained transmission will extend your vehicle's life and save money.</p>
+            <p>Installing and Repair of Air Condition</p>
           </div>
 
 
@@ -109,7 +109,7 @@ const Homepage = () => {
           <div className="services third-on-grid" ref={(el) => (serviceListRefs.current[5] = el)}>
             <img src="/engine.svg" alt="Engine Servie" />
             <p>Engine Service</p>
-            <p>A well-tuned engine delivers optimal performance and fuel efficiency.</p>
+            <p>Auto Diagnosis and Repair</p>
           </div>
 
         </div>

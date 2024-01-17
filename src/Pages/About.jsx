@@ -72,7 +72,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="overview-inner-2">
-                      <img src="" alt="Happy" className='about-img'/>
+                      <img src="/man.jpg" alt="Happy" className='about-img'/>
                     </div>
                   </div>
 

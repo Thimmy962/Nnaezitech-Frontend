@@ -19,7 +19,7 @@ const HMPGCarousel = ({slides}) => {
 
   return (
     <>
-      <Slide>
+      <Zoom>
         {
           slides.map((slide, index) => (
             <div key={index} style={{...divStyle, backgroundImage: `url(${slide.url})`}} className='slide'>
@@ -36,7 +36,7 @@ const HMPGCarousel = ({slides}) => {
        </div>
           ))
         }
-      </Slide>
+      </Zoom>
     </>
   )
 }
