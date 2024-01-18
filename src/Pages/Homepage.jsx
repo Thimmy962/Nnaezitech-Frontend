@@ -3,9 +3,12 @@ import { useState, useEffect, useRef } from 'react';
 import { API_BASE_URL } from '../Components/config';
 import GetInTouch from '../Components/GetInTouch';
 import HMPGCarousel from '../Components/HMPGCarousel';
+import Loading from '../Components/Loading';
+
 
 const Homepage = () => {
-  const [newInventory, setNewInventory] = useState([]);
+  const [newInventory, setNewInventory] = useState();
+  const [loading, setLoading] = useState(true)
 
   const serviceListRefs = useRef([]);
 
@@ -17,6 +20,7 @@ const Homepage = () => {
       });
       let data = await res.json();
       setNewInventory(data);
+      setLoading(false)
     } catch (error) {
       console.error('Error fetching new inventory:', error);
     }
@@ -60,6 +64,12 @@ const Homepage = () => {
     {url: '/car-interior.jpg', title:'BEST CAR SALES', contentA: 'Sales', contentB: "At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price"},
     {url: '/bmw-half.jpg', title: 'Best Car Maintenance Services', contentA: 'Service and Repair', contentB: 'At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price'},
 ]
+
+  if(loading){
+    return(
+      <Loading />
+    )
+  }
 
   return (
     <>

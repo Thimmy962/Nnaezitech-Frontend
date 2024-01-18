@@ -8,7 +8,9 @@ import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-  const [isHamburgerVisible, setIsHamburgerVisible] = useState(false);
+  const [isHamburgerVisible, setIsHamburgerVisible] = useState(() => {
+    return false;
+  });
 
 
 

@@ -6,7 +6,6 @@
     text-transform: capitalize;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh
 }
 
 
@@ -344,10 +343,11 @@ div.accordion h2>.accordion-button {
     width: 100%;
     animation: show-about-top 1000ms linear 1 forwards;
     font-family: Roboto;
-    background-image: url('/aboutUs.jpg');
+    background-color: #ce3b3b75;
     background-position: center;
     background-size: cover;
 }
+
 
 @keyframes show-about-top {
     0% {
@@ -429,7 +429,7 @@ div.accordion h2>.accordion-button {
 
 .about-div-3 {
     width: 100%;
-    background: linear-gradient(orange, orangered);
+    background: #ce3b3bec;
     padding: 20px 0;
 }
 
@@ -548,6 +548,7 @@ div.accordion h2>.accordion-button {
     color: white;
     text-align: center;
     text-transform: capitalize;
+    height: 84vh;
 
 }
 

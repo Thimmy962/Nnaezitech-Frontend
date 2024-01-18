@@ -5,15 +5,17 @@ import Sidebar from '../Components/Sidebar';
 import MultipleCards from '../Components/MultipleCards';
 import SearchForm from '../Components/SearchBar';
 import { Accordion } from 'react-bootstrap';
+import Loading from '../Components/Loading';
 
 
 
 const Listing = () => {
 	const params = useParams()
     const status = params.status ? params.status : null;
-    const [companies, setCompanies] = useState(null)
-    const [cars, setCars] = useState(null)
-    const [query, setQuery] = useState('')
+    const [companies, setCompanies] = useState(() => {return null})
+    const [cars, setCars] = useState(() => {return null})
+    const [query, setQuery] = useState(() => {return ''})
+    const [loading, SetLoading] = useState(()=>{return true})
 
     useEffect(()=>{
     	if(status){
@@ -34,13 +36,19 @@ const Listing = () => {
     }
 
     let get_company_car = async (id) =>{
+
+        SetLoading(true)
+
         let res = await fetch(`${API_BASE_URL}/company/${id}`,{
             method: "GET",
             headers: {"Content-Type": "application/json"}
         })
         let data = await res.json()
         setCars(data.cars)
+        SetLoading(false)
     }
+
+
 
     let get_companies = async () =>{
         let res = await fetch(`${API_BASE_URL}/companies`,{
@@ -54,6 +62,7 @@ const Listing = () => {
 
 
     let get_cars = async (query="", status="") =>{
+        SetLoading(true)
         let url;
         if(status){
              url = `${API_BASE_URL}/getcars/${status}`
@@ -68,7 +77,15 @@ const Listing = () => {
         })
         let data = await res.json()
         setCars(data)
+        SetLoading(false)
     }
+
+    if(loading){
+        return(
+          <Loading />
+        )
+      }
+
   return (
     <>
         <div className="inner-component">

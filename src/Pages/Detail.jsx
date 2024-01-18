@@ -7,10 +7,10 @@ import ImageSlider from '../Components/Carousel'
 const Detail = () => {
     const param = useParams()
     const id = param.id
-    const [car, setCar] = useState(null)
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
-    const [auxilliary, setAuxilliary] = useState("Absent")
+    const [car, setCar] = useState(() => {return null})
+    const [loading, setLoading] = useState(() => {return false})
+    const [error, setError] = useState(() => {return false})
+    const [auxilliary, setAuxilliary] = useState(() => {return "Absent"})
 
     useEffect(()=>{
       setLoading(true)
