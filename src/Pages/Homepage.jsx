@@ -65,11 +65,6 @@ const Homepage = () => {
     {url: '/bmw-half.jpg', title: 'Best Car Maintenance Services', contentA: 'Service and Repair', contentB: 'At Nnaezi, we are committed to earning your trust by providing sales high-quality cars at a fair price'},
 ]
 
-  if(loading){
-    return(
-      <Loading />
-    )
-  }
 
   return (
     <>
