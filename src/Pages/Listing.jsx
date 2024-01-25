@@ -6,6 +6,7 @@ import MultipleCards from '../Components/MultipleCards';
 import SearchForm from '../Components/SearchBar';
 import { Accordion } from 'react-bootstrap';
 import Loading from '../Components/Loading';
+import GetInTouch from '../Components/GetInTouch';
 
 
 
@@ -124,6 +125,7 @@ const Listing = () => {
                             <h1>Loading</h1>
                         )}
                     </div>
+                <GetInTouch />
             </div>
     </>
   )
