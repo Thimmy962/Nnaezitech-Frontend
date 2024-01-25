@@ -66,6 +66,7 @@ const Homepage = () => {
 ]
 
 
+
   return (
     <>
       <div className="slider-container">
@@ -124,7 +125,7 @@ const Homepage = () => {
           <div className="our-products-inner-div">
                 <div className="product-header">
                   <div className="service">OUR PRODUCTS</div>
-                    <div className="services-body">
+                    <div className="services-body" id='product-body'>
                           {newInventory?.map((inventory, index) =>(
                             <div key={index} className='inventory'>
                               {inventory.car_image ? <img src={`${API_BASE_URL}${inventory.car_image[0]}`} alt="" lazy = 'true'/>
@@ -143,6 +144,10 @@ const Homepage = () => {
                     </div>
                 </div>
           </div>
+      </div>
+
+      <div className="gallery">
+        
       </div>
       <GetInTouch />
     </>

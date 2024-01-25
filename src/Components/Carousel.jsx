@@ -1,23 +1,24 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import { API_BASE_URL } from './config';
+import 'react-slideshow-image/dist/styles.css'
+import {Slide} from 'react-slideshow-image'
+import { MEDIA_BASE_URL } from './config';
 import { Link } from 'react-router-dom';
 
 const ImageSlider = ({images}) => {
   return (
-    <Carousel>
+    <Slide>
       {
         images.map((image, index) =>(
-          <Carousel.Item key={index}>
-              <div className="d-flex justify-content-center align-items-center" >
-              <Link to={`${API_BASE_URL}${image}`}>
-                  <img src={`${API_BASE_URL}${image}`} className='carousel-img inventory-image'/>
-              </Link>
+          <div key={index} className="slide" id='caro'>
+              <div>
+                <Link to={`${MEDIA_BASE_URL}${image}`}>
+                    <img src={`${MEDIA_BASE_URL}${image}`} className='carousel-img inventory-image'/>
+                </Link>
               </div>
-      </Carousel.Item>
+      </div>
         ))
       }
-    </Carousel>
+    </Slide>
   );
 }
 

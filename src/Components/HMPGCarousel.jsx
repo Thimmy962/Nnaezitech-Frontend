@@ -1,8 +1,7 @@
 import {Link} from 'react-router-dom'
-
 import React from 'react'
 import 'react-slideshow-image/dist/styles.css'
-import {Fade, Zoom, Slide} from 'react-slideshow-image'
+import {Fade} from 'react-slideshow-image'
 
 const HMPGCarousel = ({slides}) => {
 

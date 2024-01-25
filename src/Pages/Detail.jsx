@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import { API_BASE_URL } from '../Components/config'
 import ImageSlider from '../Components/Carousel'
+import GetInTouch from '../Components/GetInTouch'
 
 
 const Detail = () => {
@@ -16,7 +17,7 @@ const Detail = () => {
       setLoading(true)
       setError(false)
       let getCar = async (id) =>{
-        let res = await fetch(`${API_BASE_URL}/getcar/${id}`, {
+        let res = await fetch(`${API_BASE_URL}getcar/${id}`, {
           method: "GET",
           headers: {"Content-type": "application/json"}
         })
@@ -131,6 +132,7 @@ const Detail = () => {
         ) : 
           error && (<div>An Error Occured</div>)  
         }
+        <GetInTouch />
       </div>
     );
         }

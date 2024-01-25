@@ -305,12 +305,19 @@ div.accordion h2>.accordion-button {
     color: var(--whyte);
 }
 
+#product-body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .inventory {
     height: 650px;
     background-color: rgba(0, 0, 0, .5);
     padding-bottom: 20px;
-    max-width: 400px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 25px;
 }
 
 .inventory img {
@@ -503,7 +510,7 @@ div.accordion h2>.accordion-button {
 }
 
 
-#detail .carousel {
+#detail .react-slideshow-con {
     width: 100%;
 }
 

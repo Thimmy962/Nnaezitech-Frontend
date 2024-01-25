@@ -307,15 +307,6 @@ form>input[type=text]::placeholder {
 }
 
 /* Carousel */
-.carousel-img {
-    width: 100%;
-    max-width: 500px;
-    height: 350px;
-}
-
-.carousel.slide {
-    background-color: var(--dark);
-}
 
 
 /*HMPGCarousel*/
@@ -329,8 +320,13 @@ form>input[type=text]::placeholder {
     background-size: cover;
 }
 
-button.nav.default-nav{
+.slider-container button.nav.default-nav{
     display: none;
+}
+
+#caro.slide img{
+    width: 100%;
+    height: 100%;
 }
 
 /* Loading */

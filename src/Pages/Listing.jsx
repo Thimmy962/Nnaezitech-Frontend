@@ -44,6 +44,7 @@ const Listing = () => {
             headers: {"Content-Type": "application/json"}
         })
         let data = await res.json()
+        console.log(data)
         setCars(data.cars)
         SetLoading(false)
     }
@@ -53,7 +54,7 @@ const Listing = () => {
     let get_companies = async () =>{
         let res = await fetch(`${API_BASE_URL}/companies`,{
             method: "GET",
-            headers: {"COntent-Type": "application/json"}
+            headers: {"Content-Type": "application/json"}
         })
         let data = await res.json()
         setCompanies(data)
@@ -79,6 +80,7 @@ const Listing = () => {
         setCars(data)
         SetLoading(false)
     }
+
 
     if(loading){
         return(

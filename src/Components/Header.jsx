@@ -8,28 +8,22 @@ import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-  const [isHamburgerVisible, setIsHamburgerVisible] = useState(() => {
-    return false;
-  });
-
-
-
   return (
     <>
       <div id='header-first-div'>
           <div id='contacts'>
               <div className='header-contact'>
                 <span>
-                  <CiMail />
+                  <CiMail color='white' size='20'/>
                 </span>
-                <p>info@mail.com</p>
+                <p>nwasukan@yahoo.com</p>
               </div>
 
               <div className='header-contact'>
                 <span>
                   <FaPhone />
                 </span>
-                <p>info@mail.com</p>
+                <p>0803287394</p>
               </div>
           </div>
 
