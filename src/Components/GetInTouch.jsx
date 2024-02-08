@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import {BiLogoFacebook, BiLogoInstagram, BiLogoLinkedin} from 'react-icons/bi'
 import {AiOutlineTwitter} from 'react-icons/ai'
@@ -87,7 +87,7 @@ const GetInTouch = () => {
                       <div className="footer-end-second">
                         <p>Terms & Conditions</p>
                         <p>Privacy Policy</p>
-                        <p>Contact</p>
+                        <Link to={'/contact'}><p style={{color: 'white'}}>Contact</p></Link>
                       </div>
                   </div>
     </div>

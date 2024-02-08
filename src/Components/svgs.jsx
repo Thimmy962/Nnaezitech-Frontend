@@ -30,7 +30,6 @@ export const ACIcon = () => {
   <rect x="47" y="30" width="6" height="40" fill="#ce3b3b" />
   <rect x="45" y="30" width="10" height="5" fill="#ce3b3b" />
 </svg>
-
 }
 
 
@@ -83,3 +82,22 @@ export const CarouselBulletWhite = () => {
 </svg>
   )
 }
+
+
+export const DriveTrain = () => {
+    return(
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+            <rect x="50" y="80" width="300" height="100" fill="gray" />
+            <circle cx="100" cy="180" r="20" fill="black" />
+            <circle cx="300" cy="180" r="20" fill="black" />
+            <line x1="120" y1="180" x2="280" y2="180" stroke="black" strokeWidth="5" />
+            <rect x="80" y="50" width="40" height="30" fill="red" />
+            <rect x="160" y="50" width="80" height="30" fill="blue" />
+            <line x1="200" y1="80" x2="200" y2="150" stroke="green" strokeWidth="5" />
+            <rect x="230" y="150" width="40" height="20" fill="orange" />
+            <line x1="250" y1="170" x2="350" y2="170" stroke="black" strokeWidth="5" />
+        </svg>
+    )
+}
+
+

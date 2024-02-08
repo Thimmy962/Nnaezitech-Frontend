@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import { API_BASE_URL } from '../Components/config';
+import { API_BASE_URL, MEDIA_BASE_URL } from '../Components/config';
 import GetInTouch from '../Components/GetInTouch';
 import HMPGCarousel from '../Components/HMPGCarousel';
-import Loading from '../Components/Loading';
 
 
 const Homepage = () => {
@@ -128,7 +127,7 @@ const Homepage = () => {
                     <div className="services-body" id='product-body'>
                           {newInventory?.map((inventory, index) =>(
                             <div key={index} className='inventory'>
-                              {inventory.car_image ? <img src={`${API_BASE_URL}${inventory.car_image[0]}`} alt="" lazy = 'true'/>
+                              {inventory.car_image ? <img src={`${MEDIA_BASE_URL}/${inventory.car_image[0]}`} alt="" lazy = 'true'/>
                               :
                                 <img src='/download.jpeg' alt='No Image'/>
                               }

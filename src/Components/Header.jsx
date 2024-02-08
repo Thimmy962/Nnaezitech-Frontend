@@ -23,7 +23,7 @@ const Header = () => {
                 <span>
                   <FaPhone />
                 </span>
-                <p>0803287394</p>
+                <p>08033287394</p>
               </div>
           </div>
 

@@ -119,7 +119,15 @@ const Listing = () => {
                             cars.length > 0 ? (
                                 <MultipleCards {...{cars}}/>
                             ) : (
-                                <div>Not Available</div>
+                                <div 
+                                    style={{
+                                        color: "white", 
+                                        height: '250px',
+                                        fontSize: '50px',
+                                        display: 'flex',
+                                        alignItems: 'center'
+                                    }}
+                                >Not Available</div>
                             )
                         ) : (
                             <h1>Loading</h1>

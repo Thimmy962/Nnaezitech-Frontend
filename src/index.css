@@ -3,7 +3,6 @@
 #root {
     background-image: url('/porsche.jpg');
     background-size: cover;
-    text-transform: capitalize;
     background-position: center;
     background-attachment: fixed;
 }
@@ -43,14 +42,16 @@ div.card-body * {
     color: var(--dark);
 }
 
-.view-btn {
-    transition: background-color ease-in 10ms;
-    background: var(--dark);
+#card .view-btn {
+    transition: all ease-in 200ms;
+    background: #ce3b3b;
     border: none;
 }
 
-.view-btn:hover {
-    background-color: var(--orange) !important;
+#card .view-btn:hover {
+    background: #fff;
+    color: #ce3b3b;
+    border: 1px solid #ce3b3b;
 }
 
 div.accordion {
@@ -509,6 +510,14 @@ div.accordion h2>.accordion-button {
     background-color: white;
 }
 
+#detail .slide{
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+}
 
 #detail .react-slideshow-con {
     width: 100%;
@@ -520,28 +529,54 @@ div.accordion h2>.accordion-button {
 }
 
 #car_info {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 150px));
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 70px 0 20px;
-}
-
-.carousel-img{
-    height: 100%;
-}
-
-#car_info>div {
-    display: grid;
-    padding-bottom: 20px;
-
+    padding: 30px 0 20px;
+    gap: 40px;
 }
 
 
-#car_info>div>p {
+
+#car_info > div{
+    width: 150px;
+    border-radius: 10px;
+    display: flex;
+    color: var(--dark);
+    color: rgb(105, 98, 98);
+    gap: 5px;
+    padding-left: 10px;
+    box-shadow: 2px 2px 10px grey;
+}
+
+#car_info .info-svg{
+    color: grey;
+    font-size: 30px;
+}
+
+#car_info .icon{
+    display: flex;
+    align-items: center;
+}
+
+#car_info .info{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+}
+
+#car_info .info p{
+    padding: 0;
     margin: 0;
 }
 
-#car_info>div>p:nth-child(2) {
+
+#car_info > div > p{
+    margin: 0;
+}
+
+#car_info > div > p:nth-child(2) {
     font-style: italic;
 }
 

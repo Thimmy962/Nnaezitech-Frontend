@@ -23,7 +23,7 @@ const MultipleCards = ({ cars }) => {
                             <p>Status:<span> {car.status}</span></p>
                             <p>Price: &#8358;<span>{car.price}</span></p>
                         </Card.Body>
-                        <Button variant='secondary' href={`detail/${car.id}`} className='view-btn'>View Car</Button>
+                        <Button href={`detail/${car.id}`} className='view-btn'  >View Car</Button>
                     </Card>
                 ))
             }
